@@ -15,11 +15,12 @@
 
 [Google.com link s popiskem](https://www.google.com "Google's Homepage")
 
+List s poradim (samo se napise dalsi cislo radku)
 1. Prvni polozka listu
 2. Druha polozka listu
 3. Treti...
 
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
+List bez poradi (sama se napise dalsi odrazka)
+* Polozka 1
+* Polozka 2
+* Dalsi polozka (misto * lze pouzit i + nebo -)
