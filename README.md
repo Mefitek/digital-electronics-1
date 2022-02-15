@@ -14,3 +14,12 @@
 [Google.com link](https://www.google.com)
 
 [Google.com link s popiskem](https://www.google.com "Google's Homepage")
+
+1. Prvni polozka listu
+2. Druha polozka listu
+3. Treti...
+
+⋅⋅* Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+⋅⋅1. Ordered sub-list
+4. And another item.
