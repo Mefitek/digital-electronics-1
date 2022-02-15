@@ -1,4 +1,4 @@
-# Lab 1: MATEJ CERNOHOUS
+# Lab 1: MATEJ CERNOHOUS_ZMENA
 
 ### De Morgan's laws
 
