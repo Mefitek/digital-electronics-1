@@ -10,3 +10,7 @@
 **_italics bold 1_** nebo __*italics bold*__
 
 ~~Strike thgrough~~
+
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
