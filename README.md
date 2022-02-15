@@ -3,7 +3,7 @@
 ## Nadpis urovne 2
 ### Nadpis urovne 3...
 
-*italics 1* nebo _italics 2*
+*italics 1* nebo _italics 2_
 
 **bold 1** nebo __bold 2__
 
