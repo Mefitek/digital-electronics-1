@@ -9,3 +9,4 @@
 
 **_italics bold 1_** nebo __*italics bold*__
 
+~~Strike thgrough~~
