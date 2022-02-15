@@ -11,6 +11,6 @@
 
 ~~Strike thgrough~~
 
-[I'm an inline-style link](https://www.google.com)
+[Google.com link](https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[Google.com link s popiskem](https://www.google.com "Google's Homepage")
