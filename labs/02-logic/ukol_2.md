@@ -1,4 +1,4 @@
-# Lab 2: MATEJ CERNOHOUS
+# Lab 2: MATĚJ ČERNOHOUS
 
 ### 2-bit comparator
 
