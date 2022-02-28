@@ -24,3 +24,15 @@ List bez poradi (sama se napise dalsi odrazka)
 * Polozka 1
 * Polozka 2
 * Dalsi polozka (misto * lze pouzit i + nebo -)
+
+Tabulka:
+| **Radek1** | **Radek2** |**Radek3** | **Radek4** | **Radek5** | **Radek6** |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| Ahoj | 0 | 0 | 1 | 1 | 1 |
+| 0 | 0 | 1 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 0 |
