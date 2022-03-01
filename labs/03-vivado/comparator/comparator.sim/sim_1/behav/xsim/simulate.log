@@ -1,0 +1,8 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_comparator_4bit/p_stimulus  File: D:/Documents/xcerno30/digital-electronics-1/labs/03-vivado/comparator/comparator.srcs/sim_1/new/tb_comparator_4bit.vhd
+Error: Input combination 1001 0111 FAILED
+Time: 100 ns  Iteration: 0  Process: /tb_comparator_4bit/p_stimulus  File: D:/Documents/xcerno30/digital-electronics-1/labs/03-vivado/comparator/comparator.srcs/sim_1/new/tb_comparator_4bit.vhd
+Note: Stimulus process finished
+Time: 100 ns  Iteration: 0  Process: /tb_comparator_4bit/p_stimulus  File: D:/Documents/xcerno30/digital-electronics-1/labs/03-vivado/comparator/comparator.srcs/sim_1/new/tb_comparator_4bit.vhd
