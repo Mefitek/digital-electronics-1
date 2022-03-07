@@ -6,6 +6,7 @@ The Nexys A7 board provides two four-digit common anode seven-segment LED displa
 
 Segmentovky zapojené se společnou Anodou
 8 Segmentovek po dvou čtveřicích, každá čtveřice má společné ovládací piny A-P a každá má vlastní Anodu (viz obrázek)
+
 ![Piny segmentovek](images/segmentovka_piny.png)
 
 
