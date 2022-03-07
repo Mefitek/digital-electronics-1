@@ -8,6 +8,7 @@ Segmentovky zapojené se společnou Anodou
 8 Segmentovek po dvou čtveřicích, každá čtveřice má společné ovládací piny A-P a každá má vlastní Anodu (viz obrázek)
 
 ![Piny segmentovek](images/segmentovka_piny.png)
+![Piny segmentovek](images/segmentovka_zapojeni.png)
 
 
 2. Complete the decoder truth table for **common anode** 7-segment display.
