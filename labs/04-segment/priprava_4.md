@@ -11,7 +11,9 @@ Segmentovky zapojené se společnou Anodou
 ![Piny segmentovek](images/segmentovka_zapojeni.png)
 
 Ze zapojeni je vidět že pokud (například pro první segmentovku AN0):
+
 a) Přivedeme-li na pin anody (AN0) HIGH úroveň (3V3), otevřu tranzistor Q3B a rozsvítíme jednotlivé segmenty (CA až CP) přivedením LOW úrovně (GND)
+
 b) Přivedeme-li na pin anody (AN0) LOW úroveň (GND), tranzistor bude zavřený a jednotlivé segmenty nerozsvítíme
 
 
