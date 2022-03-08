@@ -5,16 +5,16 @@ The Nexys A7 board provides two four-digit common anode seven-segment LED displa
 1. See [schematic](https://github.com/tomas-fryza/digital-electronics-1/blob/master/docs/nexys-a7-sch.pdf) or [reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) of the Nexys A7 board and find out the connection of 7-segment displays, ie to which FPGA pins are connected and how. Draw the schematic with 7-segment displays.
 
 Segmentovky zapojené se společnou Anodou
-8 Segmentovek po dvou čtveřicích, každá čtveřice má společné ovládací piny A-P a každá má vlastní Anodu (viz obrázek)
+8 Segmentovek po dvou čtveřicích, každá čtveřice má společné ovládací piny A-P a každá segmentovka má vlastní Anodu (viz obrázek)
 
 ![Piny segmentovek](images/segmentovka_piny.png)
 ![Piny segmentovek](images/segmentovka_zapojeni.png)
 
 Ze zapojeni je vidět že pokud (například pro první segmentovku AN0):
 
-        a) Přivedeme-li na pin anody (AN0) HIGH úroveň (3V3), otevřu tranzistor Q3B a rozsvítíme jednotlivé segmenty (CA až CP) přivedením LOW úrovně (GND)
+        a) Přivedeme-li na pin anody (AN0) LOW úroveň (GND), otevřu PNP tranzistor Q3B a rozsvítíme jednotlivé segmenty (CA až CP) přivedením LOW úrovně (GND)
 
-        b) Přivedeme-li na pin anody (AN0) LOW úroveň (GND), tranzistor Q3B bude zavřený a jednotlivé segmenty nerozsvítíme
+        b) Přivedeme-li na pin anody (AN0) HIGH úroveň (3v3), PNP tranzistor Q3B bude zavřený a jednotlivé segmenty nerozsvítíme
 
 
 2. Complete the decoder truth table for **common anode** 7-segment display.
