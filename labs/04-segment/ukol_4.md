@@ -85,7 +85,7 @@
 
    ![your figure](images/simulace.png)
 
-   Bit by bit:
+   S jednotlivymi bity:
    ![my figure by bits](images/simulace_1.png)
 
 ### LED(7:4) indicators
@@ -110,6 +110,5 @@
 
     -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
     -- Zajimaji nas pripady kdy bit s vahou 1 je 0 a taktez pripad "0001"
-    LED(7) <= '0' when (SW(0) = '0') else
-              '0' when (SW = "0001") else '1'; 
+    LED(7) <= '0' when ( (SW(0) = '0') or (SW = "0001") ) else '1';
    ```
