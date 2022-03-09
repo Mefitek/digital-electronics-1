@@ -98,17 +98,17 @@
 
    -- Turn LED(4) on if input value is equal to 0, ie "0000"
    -- Zajima nas pouze pripad "0000"
-    LED(4) <= '0' when (SW = "0000") else '1';
+    LED(4) <= '1' when (SW = "0000") else '0';
 
     -- Turn LED(5) on if input value is greater than "1001", ie 10, 11, 12, ...
     -- Zajima nas pripad kdy bit s vahou 8 je 1 a alespon jeden z bitu s vahami 4 a 2 je 1
-    LED(5) <= '0' when ( (SW(3) = '1') and ( (SW(1) = '1') or (SW(2) = '1') ) ) else '1';
+    LED(5) <= '1' when ( (SW(3) = '1') and ( (SW(1) = '1') or (SW(2) = '1') ) ) else '0';
 
     -- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
     -- Zajimaji nas pripady kdy bit s vahou 1 je 1 (protoze licha cisla jsou suda cisla + 1 a ostatni bity maji vahu nasobku 2)
-    LED(6) <= '0' when (SW(0) = '1') else '1';
+    LED(6) <= '1' when (SW(0) = '1') else '0';
 
     -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
     -- Zajimaji nas pripady kdy bit s vahou 1 je 0 a taktez pripad "0001"
-    LED(7) <= '0' when ( (SW = '0001') or (SW = "0010") or (SW = "0100") or (SW = "1000") ) else '1';
+    LED(7) <= '1' when ( (SW = '0001') or (SW = "0010") or (SW = "0100") or (SW = "1000") ) else '0';
    ```
