@@ -111,6 +111,6 @@
     -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
     -- Zajimaji nas tyto ctyri stavy
     LED(7) <= '1' when ( (SW = '0001') or (SW = "0010") or (SW = "0100") or (SW = "1000") ) else '0';
-    -- Po pouziti minimalizace K-mapou by pripad pro tuto ledku take mohl vypadat nasledovne
-    -- LED(7) <= '1' when ( ((SW(2) = '0') and (SW(1) = '1')) or ( (SW(3) = '0') and (SW(1) = '0') and ( (SW(0) = '1') xor (SW(2) = '1') ) ) ) else '0';
+    -- Po pouziti minimalizace K-mapou:
+    -- LED(7) <= '1' when ( ((SW(2) = '0') and (SW(1) = '1') and (SW(0) = '0')) or ((SW(3) = '0') and (SW(1) = '0') and ( (SW(0) = '1') xor (SW(2) = '1')))) else '0';
    ```
