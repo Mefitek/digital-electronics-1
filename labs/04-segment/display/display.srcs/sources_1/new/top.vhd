@@ -84,7 +84,7 @@ begin
     LED(6) <= '0' when (SW(0) = '1') else '1';
 
     -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
-    LED(5) <= '0' when (SW(0) = '0') else
+    LED(7) <= '0' when (SW(0) = '0') else
               '0' when (SW = "0001") else '1';  
 
 end Behavioral;
