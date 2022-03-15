@@ -22,7 +22,6 @@ begin
     begin
         if rising_edge(clk) then
 
-
             if (rst = '1' ) then
                 s_q     <= '0';
             else
