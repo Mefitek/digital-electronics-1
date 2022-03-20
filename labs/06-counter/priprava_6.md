@@ -8,7 +8,6 @@ Dle schématu:
 
 ![buttons schematic](images/buttons.png)
 
-List bez poradi (sama se napise dalsi odrazka)
 * Na pinech tlačítek je ve výchozím stavu LOW úroveň (GND) a při jejich zmáčknutí HIGH úroveň (VCC3V3).
 * 5 tlačítek má piny: BTNL, BTNR, BTNU, BTND, BTNC.
 * Pro ochranu proti zkratu jsou tlačítka zapojeny s rezistory.
