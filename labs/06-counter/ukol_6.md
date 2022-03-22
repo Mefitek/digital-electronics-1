@@ -20,8 +20,12 @@
             elsif (en_i = '1') then -- Test if counter is enabled
 
                 -- TEST COUNTER DIRECTION HERE
-
+                if(cnt_up_i = '1') then
                     s_cnt_local <= s_cnt_local + 1;
+                else
+                    s_cnt_local <= s_cnt_local - 1;
+                end if;
+                
             end if;
         end if;
     end process p_cnt_up_down;
@@ -29,7 +33,8 @@
 
 2. Screenshot with simulated time waveforms. Test reset as well. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![your figure]()
+   ![First waveform](images/waveform_1.png)
+   ![Second waveform](images/waveform_2.png)
 
 ### Two counters
 
