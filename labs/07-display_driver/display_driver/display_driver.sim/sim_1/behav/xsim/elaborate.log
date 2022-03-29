@@ -11,7 +11,7 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=400000)\]
 Compiling architecture behavioral of entity xil_defaultlib.cnt_up_down [\cnt_up_down(g_cnt_width=2)\]
 Compiling architecture behavioral of entity xil_defaultlib.hex_7seg [hex_7seg_default]
 Compiling architecture behavioral of entity xil_defaultlib.driver_7seg_4digits [driver_7seg_4digits_default]
