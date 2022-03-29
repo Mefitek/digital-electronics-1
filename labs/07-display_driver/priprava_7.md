@@ -6,7 +6,7 @@ Due to the physiological properties of human vision, it is necessary that the ti
 
 1.
 
-  Z minulých cvičení již váme že zapojení Anody pro ovládání SEdmisegmentovky je ACTIVE LOW, jestnotlivé segmenty sedmysegmentovek jsou také zapojeny jako ACTIVE LOW.
+  Z minulých cvičení již víme že zapojení Anody pro ovládání Sedmisegmentovky je ACTIVE LOW (spínání PNP tranzistoru), jestnotlivé segmenty sedmysegmentovek jsou také zapojeny jako ACTIVE LOW.
   Pomocí těchto znalostí a online nástroje WaveDrom dokážeme nasimulovat chtěný průběh:
 
   ![Timing of seven-segment display](images/waveform_segmentovky.png)
