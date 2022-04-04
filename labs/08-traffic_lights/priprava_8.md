@@ -8,6 +8,7 @@ Tím docílíme rozsvícení určité barevné diody RGB diody.
 ![RGB Schema](images/RGB_Nexys-A7_schematic.png)
 
 ![RGB Schema](images/RGB_Nexys-A7_pin_names.png)
+
 ![RGB Soucastka](images/RBG_Nexys-A7_hardware_position.png)
 
 | **RGB LED** | **Artix-7 pin names** | **Red** | **Yellow** | **Green** |
