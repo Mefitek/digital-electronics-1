@@ -14,7 +14,7 @@ Tím docílíme rozsvícení určité barevné diody RGB diody.
 | **RGB LED** | **Artix-7 pin names** | **Red** | **Yellow** | **Green** |
 | :-: | :-: | :-: | :-: | :-: |
 | LD16 | N15, M16, R12 | `1,0,0` | `1,1,0` | `0,1,0` |
-| LD17 | N16 | R11 | G14 | `1,0,0` | `1,1,0` | `0,1,0` |
+| LD17 | N16, R11, G14 | `1,0,0` | `1,1,0` | `0,1,0` |
 
 Z tabulky můžeme pozorovat, že pro ovládání semaforu nebudeme potřebovat modrou diodu RGB diody -> může být připojena na LOW úroveň nehledě na vyžadovanou barvu.
 
