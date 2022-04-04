@@ -21,6 +21,7 @@ Z tabulky můžeme pozorovat, že pro ovládání semaforu nebudeme potřebovat 
 2. See [schematic](https://github.com/tomas-fryza/digital-electronics-1/blob/master/docs/nexys-a7-sch.pdf) or [reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) of the Nexys A7 board and find out to which FPGA pins Pmod ports JA, JB, JC, and JD are connected.
 
 Pmod - Peripheral Module Interface
+
 "Pmod™ devices are Digilent's line of small I/O interface boards that offer an ideal way to extend the capabilities of programmable logic and embedded control boards. They allow sensitive signal conditioning circuits and high-power drive circuits to be placed where they are most effective - near sensors and actuators."
 
 ![Pmod hardware](images/Pmod_hardware.png)
