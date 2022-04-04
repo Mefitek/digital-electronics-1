@@ -7,7 +7,7 @@ Tím docílíme rozsvícení určité barevné diody RGB diody.
 
 ![RGB Schema](images/RGB_Nexys-A7_schematic.png)
 
-![RGB Schema](images/RGB_Nexys-A7_pin_names.png)
+![RGB FPGA pins](images/RGB_Nexys-A7_pin_names.png)
 
 ![RGB Soucastka](images/RBG_Nexys-A7_hardware_position.png)
 
@@ -20,8 +20,11 @@ Z tabulky můžeme pozorovat, že pro ovládání semaforu nebudeme potřebovat 
 
 2. See [schematic](https://github.com/tomas-fryza/digital-electronics-1/blob/master/docs/nexys-a7-sch.pdf) or [reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) of the Nexys A7 board and find out to which FPGA pins Pmod ports JA, JB, JC, and JD are connected.
 
-![RGB Schema](Pmod_hardware.png)
+Pmod - Peripheral Module Interface
+"Pmod™ devices are Digilent's line of small I/O interface boards that offer an ideal way to extend the capabilities of programmable logic and embedded control boards. They allow sensitive signal conditioning circuits and high-power drive circuits to be placed where they are most effective - near sensors and actuators."
 
-![RGB Schema](images/Pmods_schematic.png)
+![Pmod hardware](images/Pmod_hardware.png)
 
-![RGB Soucastka](images/Pmods_FPGA_pins.png.png)
+![Pmod Schema](images/Pmods_schematic.png)
+
+![Pmod FPGA pins](images/Pmods_FPGA_pins.png)
