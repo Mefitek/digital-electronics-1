@@ -6,6 +6,7 @@ Ze schématu lze vidět že jednotlivé barevné složky (Red Green nebo Blue di
 Tím docílíme rozsvícení určité barevné diody RGB diody. 
 
 ![RGB Schema](images/RGB_Nexys-A7_schematic.png)
+
 ![RGB Schema](images/RGB_Nexys-A7_pin_names.png)
 ![RGB Soucastka](images/RBG_Nexys-A7_hardware_position.png)
 
