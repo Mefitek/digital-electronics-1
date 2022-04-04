@@ -19,3 +19,9 @@ Tím docílíme rozsvícení určité barevné diody RGB diody.
 Z tabulky můžeme pozorovat, že pro ovládání semaforu nebudeme potřebovat modrou diodu RGB diody -> může být připojena na LOW úroveň nehledě na vyžadovanou barvu.
 
 2. See [schematic](https://github.com/tomas-fryza/digital-electronics-1/blob/master/docs/nexys-a7-sch.pdf) or [reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) of the Nexys A7 board and find out to which FPGA pins Pmod ports JA, JB, JC, and JD are connected.
+
+![RGB Schema](Pmod_hardware.png)
+
+![RGB Schema](images/Pmods_schematic.png)
+
+![RGB Soucastka](images/Pmods_FPGA_pins.png.png)
