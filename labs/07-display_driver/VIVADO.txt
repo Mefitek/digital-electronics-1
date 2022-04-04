@@ -1,0 +1,4 @@
+Na konci hodiny jsem měl problém s pushnutím aktualizovaného repozitáře a
+neměl jsem dostatek času problém vyřešit.
+Simulace průběhu mi byla zkontrolována vyučujícím.
+Nahrání na desku Nexys A7 50t proběhlo úspěšně, segmentovky ale z neznámých příčin nesvítily..
