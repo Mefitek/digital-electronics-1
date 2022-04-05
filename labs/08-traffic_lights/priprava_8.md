@@ -4,6 +4,7 @@
 
 Ze schématu lze vidět že jednotlivé barevné složky (Red Green nebo Blue dioda) RGB diody přivedením HIGH úrovně na ovládací pin sepneme NPN tranzistor.
 Tím docílíme rozsvícení určité barevné diody RGB diody. 
+
 "Note: Digilent strongly recommends the use of pulse-width modulation (PWM) when driving the tri-color LEDs. Driving any of the inputs to a steady logic ‘1’ will result in the LED being illuminated at an uncomfortably bright level."
 
 ![RGB Schema](images/RGB_Nexys-A7_schematic.png)
