@@ -56,6 +56,7 @@ architecture Behavioral of tlc is
 
     -- Local delay counter
     -- 5 bitu: abychom si uvnitr stavu zajistili delay
+    
     signal s_cnt : unsigned(4 downto 0);
 
     -- Specific values for local counter
