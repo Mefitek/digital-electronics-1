@@ -21,9 +21,15 @@
             else
                 case s_cnt is
                     when "11" =>
+<<<<<<< HEAD
                         s_hex <= data3_i; -- prirazeni dat do segmentovky
                         dp_o  <= dp_i(3); -- zda sviti desetinna tecka
                         dig_o <= "0111"; -- ktera segmentovka sepnuta
+=======
+                        s_hex <= data3_i;
+                        dp_o  <= dp_i(3);
+                        dig_o <= "0111";
+>>>>>>> 2b10b4c29a08e3e2cfb430bddd8ae73209c85061
 
                     when "10" =>
                         s_hex <= data2_i;
@@ -47,10 +53,18 @@
 
 2. Screenshot with simulated time waveforms. Test reset as well. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
+<<<<<<< HEAD
 ![Simulated waveform](images/waveform.png)
+=======
+   ![your figure](images/Waveforms.png)
+>>>>>>> 2b10b4c29a08e3e2cfb430bddd8ae73209c85061
 
 ### Eight-digit driver
 
 1. Image of the 8-digit driver's block schematic. The image can be drawn on a computer or by hand. Always name all inputs, outputs, components, and internal signals!
 
+<<<<<<< HEAD
    ![your figure]()
+=======
+   ![8digit schematic](images/8segment.png)
+>>>>>>> 2b10b4c29a08e3e2cfb430bddd8ae73209c85061
