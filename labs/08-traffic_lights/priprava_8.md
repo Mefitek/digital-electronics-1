@@ -9,7 +9,7 @@ Tím docílíme rozsvícení určité barevné diody RGB diody.
 
 ![RGB FPGA pins](images/RGB_Nexys-A7_pin_names.png)
 
-![RGB Soucastka](images/RBG_Nexys-A7_hardware_position.png)
+![RGB Soucastka](images/RBG_Pmod_Nexys-A7_hardware_positions.png)
 
 | **RGB LED** | **Artix-7 pin names** | **Red** | **Yellow** | **Green** |
 | :-: | :-: | :-: | :-: | :-: |
