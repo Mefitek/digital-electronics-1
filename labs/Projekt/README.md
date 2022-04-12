@@ -5,7 +5,6 @@
 * Petr Klíma leader
 * Vladimír Skoumal responsible for finding solutions on internet (esp. fektuška)
 * Matěj Černohous responsible for logic and documentation
-* ...
 
 ### Table of contents
 
