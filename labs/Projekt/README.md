@@ -2,8 +2,8 @@
 
 ### Team members
 
-* Petr Klíma leader
-* Vladimír Skoumal responsible for finding solutions on internet (esp. fektuška)
+* Petr Klíma leader and main dick sucker
+* Vladimír Skoumal responsible for internet research and design
 * Matěj Černohous responsible for logic and documentation
 
 ### Table of contents
