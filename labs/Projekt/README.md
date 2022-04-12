@@ -4,7 +4,7 @@
 
 * Petr Klíma leader and main dick sucker
 * Vladimír Skoumal responsible for internet research and design
-* Matěj Černohous responsible for logic and documentation
+* Matěj Černohous also known as fucking pussy responsible for logic and documentation
 
 ### Table of contents
 
