@@ -2,9 +2,9 @@
 
 ### Team members
 
-* Petr Klíma (responsible for xxx)
-* Vladimír Skoumal (responsible for xxx)
-* Matěj Černohous (responsible for xxx)
+* Petr Klíma leader
+* Vladimír Skoumal responsible for finding solutions on internet (esp. fektuška)
+* Matěj Černohous responsible for logic and documentation
 * ...
 
 ### Table of contents
