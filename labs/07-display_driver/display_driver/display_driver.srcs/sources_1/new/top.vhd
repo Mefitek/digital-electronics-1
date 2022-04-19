@@ -56,6 +56,7 @@ begin
       port map(
           clk        => CLK100MHZ,
           reset      => BTNC,
+          
           data0_i(3) => SW(3),
           data0_i(2) => SW(2),
           data0_i(1) => SW(1),
@@ -75,10 +76,18 @@ begin
           data3_i(2) => SW(14),
           data3_i(1) => SW(13),
           data3_i(0) => SW(12),
+          
           dp_i       => "0111",
-
-          -- MAP DECIMAL POINT AND DISPLAY SEGMENTS
-
+          
+          dp_o      => DP,
+          seg_o(0)  => CG,
+          seg_o(1)  => CF,
+          seg_o(2)  => CE,
+          seg_o(3)  => CD,
+          seg_o(4)  => CC,
+          seg_o(5)  => CB,
+          seg_o(6)  => CA,
+            
           dig_o(3 downto 0) => AN(3 downto 0)
       );
 
