@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Apr 26 13:18:10 2022
+# Process ID: 9548
+# Current directory: D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.runs/synth_1/top.vds
+# Journal file: D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a50ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6860
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1021.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/top.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'speed_calc' [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/speed_calc.vhd:34]
+	Parameter g_DELKA_1 bound to: 100 - type: integer 
+	Parameter g_DELKA_2 bound to: 100 - type: integer 
+	Parameter g_DELKA_3 bound to: 100 - type: integer 
+	Parameter g_clk_freq bound to: 100000000 - type: integer 
+ERROR: [Synth 8-502] non-constant real-valued expression is not supported [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/speed_calc.vhd:92]
+ERROR: [Synth 8-285] failed synthesizing module 'speed_calc' [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/speed_calc.vhd:34]
+ERROR: [Synth 8-285] failed synthesizing module 'top' [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/top.vhd:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1021.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+7 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 13:18:17 2022...

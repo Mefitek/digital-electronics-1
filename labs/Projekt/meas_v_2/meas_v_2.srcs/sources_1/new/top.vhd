@@ -16,7 +16,9 @@ use IEEE.STD_LOGIC_1164.ALL;
               CG : out STD_LOGIC;
               DP : out STD_LOGIC;
               
-              AN : out STD_LOGIC_VECTOR (7 downto 0) );  
+              AN : out STD_LOGIC_VECTOR (7 downto 0)
+           );
+  end entity top;
 
   architecture Behavioral of top is
 
@@ -52,10 +54,10 @@ use IEEE.STD_LOGIC_1164.ALL;
             clk   		=> CLK100MHZ,
             
             -- senzory jako cudliky jen pro testovani
-            senzor_1_i 	=> SW(15),
-            senzor_2_i 	=> SW(14),
-            senzor_3_i 	=> SW(13),
-            senzor_4_i 	=> SW(12),
+            sensor_1_i 	=> SW(15),
+            sensor_2_i 	=> SW(14),
+            sensor_3_i 	=> SW(13),
+            sensor_4_i 	=> SW(12),
             speed_1_o	=> s_v1,
             speed_2_o	=> s_v2,
             speed_3_o	=> s_v3,
@@ -67,11 +69,11 @@ use IEEE.STD_LOGIC_1164.ALL;
         
         port map(
             clk   		=> CLK100MHZ,
-            s_1_i		=> SW(0),
-            s_2_i		=> SW(1),
-            v_1_i		=> s_v1,
-            v_2_i		=> s_v2,
-            v_3_i		=> s_v3,
+            s1_i		=> SW(0),
+            s2_i		=> SW(1),
+            v1_i		=> s_v1,
+            v2_i		=> s_v2,
+            v3_i		=> s_v3,
             v_i			=> s_v,
             v_print_o	=> s_v_print
         );
