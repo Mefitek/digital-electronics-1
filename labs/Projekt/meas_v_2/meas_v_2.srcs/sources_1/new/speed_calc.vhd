@@ -89,7 +89,7 @@ begin
                       if (sensor_2_i = '0') then
                           s_cnt_1 <= s_cnt_1 + 1;
                       else
-                          speed_1_o <= (Real(g_DELKA_1) / Real(s_cnt_1))*c_cmT_to_ms; -- rychlost v m/s
+                          speed_1_o <= ((Real(g_DELKA_1) / Real(s_cnt_1))*c_cmT_to_ms); -- rychlost v m/s
                           s_state <= L_SECTOR_2;
                       end if;
 

@@ -16,9 +16,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50ti'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50ti'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 6860
+INFO: [Synth 8-7075] Helper process launched with PID 10528
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1021.172 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1021.230 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/top.vhd:23]
 INFO: [Synth 8-638] synthesizing module 'speed_calc' [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/speed_calc.vhd:34]
@@ -30,11 +30,11 @@ ERROR: [Synth 8-502] non-constant real-valued expression is not supported [D:/Do
 ERROR: [Synth 8-285] failed synthesizing module 'speed_calc' [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/speed_calc.vhd:34]
 ERROR: [Synth 8-285] failed synthesizing module 'top' [D:/Documents/xcerno30/digital-electronics-1/labs/Projekt/meas_v_2/meas_v_2.srcs/sources_1/new/top.vhd:23]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1021.172 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1021.230 ; gain = 0.000
 ---------------------------------------------------------------------------------
 synthesize failed
 INFO: [Common 17-83] Releasing license: Synthesis
 7 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
 synth_design failed
 ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 13:18:17 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 14:00:40 2022...
