@@ -1,0 +1,10 @@
+Neboť jsme pro potřebu výpočtu rychlosti potřebovali jsme operaci dělení. Neboť jsme se s
+problematikou dělení v cvičeních nesetkali, použili jsme datový typ "real" neboť ten jako
+jediný podporoval operátor "/" = dělení.
+Pro účel simulace vše fungovalo a předpokládali jsme, že procesor desky si datový typ real
+"přeloží" na Xbitovou proměnnou a zvládne s ním pracovat. Když jsme ale přešli na nahrání
+programů na desku, zjistili jsme, že kód obsahující "real" nelze na desku nahrát.
+Pokusili jsme se program předělat za pomoci "unsigned" datového typu který lze později
+převést na "std_logic_vector", ale během simulací v prostředí "EDA Playground" se nám
+nedařilo nasimulovat.
+Tudíž máme pouze simulovanou verzi projektu.
