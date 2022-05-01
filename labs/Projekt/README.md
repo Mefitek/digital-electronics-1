@@ -32,8 +32,7 @@ and the final product in this file and video presentation.
 ## Hardware description
 
 #### Nexys A7-50T Board
-It is an accessible FPGA developement board with great performance, we were already familiar with it's funcionality from Digital electronics practicals.
-
+It is an accessible FPGA developement board with great performance, we were already familiar with it's funcionality from Digital electronics practicals. 
 For more information see [The store page](https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/), 
 [reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) or 
 [schematic](docs/nexys-a7-sch.pdf)
