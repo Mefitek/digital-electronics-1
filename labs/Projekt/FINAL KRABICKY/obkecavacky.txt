@@ -8,3 +8,11 @@ Pokusili jsme se program předělat za pomoci "unsigned" datového typu který l
 převést na "std_logic_vector", ale během simulací v prostředí "EDA Playground" se nám
 nedařilo nasimulovat.
 Tudíž máme pouze simulovanou verzi projektu.
+
+
+Pokusili sme se to předělat do std_logic_vector, ale talčil nás čas a museli jsme dodělat
+dokumentaci, takže se nám nepodařilo to zprovoznit (+ ukázat to jak sem se o to pokoušel
+u Klími)
+
+napsat že vláďa testoval reálný chování senzorů, staral se o testbenche - např. simulování
+krajních situací.

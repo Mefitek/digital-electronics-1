@@ -1,0 +1,8 @@
+real_to_hex:
+	https://www.edaplayground.com/x/uEgg
+real_switch:
+	https://www.edaplayground.com/x/Lxhs
+speed_calc: (Housuv meric)
+	https://www.edaplayground.com/x/SMVi
+speed_meas: (Klimuv meric)
+	
