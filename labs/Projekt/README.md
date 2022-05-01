@@ -50,6 +50,8 @@ as "Active LOW" - meaning that when no reflected light is recieved the data outp
 ## VHDL modules description and simulations
 
 ### Speed_measure
+
+#### Description
 As the name of module suggests this module measures speed of any object using 2 inputs for [IR sensors](#sensors), which are connected to `en_i` and `dis_i` inpusts. Module has **3 generic variables**: 
   1. `g_dist` = distance between sensors in cm, we work with it in [TOP](#top)
   2. `g_active` = it represents active state of sensors (we use g_active = 1 for simulations)
@@ -125,6 +127,11 @@ begin
     
 end architecture Behavioral;
 ```
+
+#### Simulation
+Distance between sensors is set to 0,0025 cm and time between detections is 2000 ns (0,002 ms), so we should get speed (0,002/0,000025) = cca 12 m/s. [Simulation in EDAplayground](https://www.edaplayground.com/x/SycU)
+
+![Speed_measure simulation](images/speed_measure.png)
 
 <a name="top"></a>
 
