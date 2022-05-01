@@ -129,9 +129,10 @@ end architecture Behavioral;
 ```
 
 #### Simulation
-Distance between sensors is set to 0,0025 cm and time between detections is 2000 ns (0,002 ms), so we should get speed (0,002/0,000025) = cca 12 m/s. [Simulation in EDAplayground](https://www.edaplayground.com/x/SycU)
+Distance between sensors is set to 0,0025 cm and time between detections is 2000 ns (0,002 ms), so we should get speed (0,002/0,000025) = cca 12 m/s. 
+- [Simulation in EDAplayground](https://www.edaplayground.com/x/SycU)
 
-![Speed_measure simulation](images/speed_measure.png)
+![Speed_measure simulation](images/Simulations/speed_measure.png)
 
 <a name="top"></a>
 
