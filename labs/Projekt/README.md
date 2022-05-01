@@ -21,14 +21,23 @@
 
 Official assigment: "Measuring the speed of an object through a series of IR sensors (such as HW-201) or optical barriers."
 
-After consulting with the project assignee, it was specified that the object is to pass by at least 4 sensors connected to 
-the NEXYS A7-50T board and it's speeds (speed in each "sector" between individual sensors) would be calculated and displayed on NEXYS's 7segment displays.
+After consulting with the project assignee it was specified that the object is to pass by at least 4 IR sensors (connected to 
+the NEXYS A7-50T board) and it's speeds (speed in each "sector" between individual sensors) are to be calculated and displayed on NEXYS's 7segment displays.
+
+Our objective is to fulfill the assigment, make the funcionality versitale and modular, write the code in compliance with VHDL Guidelines and document the process 
+and the final product in this file and video presentation.
 
 <a name="hardware"></a>
 
 ## Hardware description
 
-Write your text here.
+#### Nexys A7-50T Board
+It is an accessible FPGA developement board with great performance, we were already familiar with it's funcionality from Digital electronics practicals.
+
+For more information see [The store page](https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/), 
+[reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) or 
+[schematic](docs/nexys-a7-sch.pdf)
+
 
 <a name="modules"></a>
 
