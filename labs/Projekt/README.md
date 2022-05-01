@@ -310,7 +310,7 @@ begin
             seg_o(4)	=> CC,
             seg_o(5)	=> CB,
             seg_o(6)	=> CA,
-            dp_o		=> DP,
+            dp_o	=> DP,
             dig_o(3 downto 0) => AN(3 downto 0)
         );
         
