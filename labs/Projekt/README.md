@@ -10,7 +10,7 @@
 * Matěj Černohous - Programming, Documentation
    * Check english language
    * Comment TOP source code
-* Together - complete TOP description
+* Together - finish TOP description
 
 
 ### Table of contents
