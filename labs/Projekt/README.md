@@ -138,7 +138,7 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2000
 
 ## TOP module description and simulations
 
-![Top structure](images/Top.png)
+![Top structure](images/Top.jpg)
 
 <a name="video"></a>
 
