@@ -5,4 +5,4 @@ real_switch:
 speed_calc: (Housuv meric)
 	https://www.edaplayground.com/x/SMVi
 speed_meas: (Klimuv meric)
-	
+	https://www.edaplayground.com/x/QhwP
