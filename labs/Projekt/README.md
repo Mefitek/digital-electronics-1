@@ -37,6 +37,7 @@ For more information see [The store page](https://store.digilentinc.com/nexys-a7
 [reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) or 
 [schematic](docs/nexys-a7-sch.pdf).
 
+<a name="sensors"></a>
 ### IR sensor HW-201
 It's main function is to transmit and recieve reflected infrared waves (wavelength 7000-1000 nm) to signalize the passing of an object. It is important to note 
 that the IR light will have trouble reflecting of off black object, as it will be absorbed. Another important thing to mention is the fact that the sensor functions 
@@ -48,7 +49,11 @@ as "Active LOW" - meaning that when no reflected light is recieved the data outp
 
 ## VHDL modules description and simulations
 
-Write your text here.
+### Speed_measure
+As the name of module suggests this module measures speed of any object using 2 inputs for [IR sensors](#sensors), which are connected to `en_i` and `dis_i` inpusts. Module has 3 generic variables: 
+  1. `g_dist` = distance between sensors in cm
+  2. `g_active` = it represents active state of sensors (we use g_active = 1 for simulations)
+  3. `g_clk_f` = clock frequency
 
 <a name="top"></a>
 
