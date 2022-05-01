@@ -3,8 +3,12 @@
 ### Team members
 
 * Petr Klíma - Team leader, Programming, Design
+   * Top simulation
 * Vladimír Skoumal - Testing, Hardware behaviour, Video presentation
+   * Video presentation, 
+   * Modules testing a description (real_switch and real_to_hex) 	
 * Matěj Černohous - Programming, Documentation
+   * Check english language 
 
 ### Table of contents
 
