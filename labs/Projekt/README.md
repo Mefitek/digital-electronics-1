@@ -164,8 +164,8 @@ entity top is
 		JB1 : in STD_LOGIC;
 		JB2 : in STD_LOGIC;
 
-        CLK100MHZ : in STD_LOGIC;
-		SW 		  : in STD_LOGIC_VECTOR (1 downto 0);
+        	CLK100MHZ : in STD_LOGIC;
+		SW  : in STD_LOGIC_VECTOR (1 downto 0);
 		
 		CA : out STD_LOGIC;
 		CB : out STD_LOGIC;
@@ -201,7 +201,7 @@ begin
 	speed_measure_section_1 : entity work.speed_measure
       generic map(
           g_dist => 20.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -215,7 +215,7 @@ begin
     speed_measure_section_2 : entity work.speed_measure
       generic map(
           g_dist => 30.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -229,7 +229,7 @@ begin
     speed_measure_section_3 : entity work.speed_measure
       generic map(
           g_dist => 20.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -243,7 +243,7 @@ begin
 	speed_measure_avg : entity work.speed_measure
       generic map(
           g_dist => 70.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -254,7 +254,7 @@ begin
           v_o	 => s_ravg
       );
     --------------------------------------------------------------------
-	speed_switch_print : entity work.real_switch
+	speed_real_switch : entity work.real_switch
 		port map(
       
 			clk   => CLK100MHZ,
@@ -271,7 +271,7 @@ begin
       
       );
       
-    speed_print_prepare : entity work.real_to_hex
+    speed_real_convert : entity work.real_to_hex
 		port map(
       
 			clk   => CLK100MHZ,
