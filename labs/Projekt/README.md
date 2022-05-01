@@ -2,9 +2,9 @@
 
 ### Team members
 
-* Petr Klíma leader and main dick sucker
-* Vladimír Skoumal responsible for internet research and design
-* Matěj Černohous also known as fucking pussy responsible for logic and documentation
+* Petr Klíma - Team leader, Programming, Design
+* Vladimír Skoumal - Testing, Hardware behaviour, Video presentation
+* Matěj Černohous - Programming, Documentation
 
 ### Table of contents
 
@@ -19,7 +19,11 @@
 
 ## Project objectives
 
-Write your text here.
+Official assigment: "Measuring the speed of an object through a series of IR sensors (such as HW-201) or optical barriers."
+
+We were assigned to measure the speed of an object through a series of sensors. The specifications were that the object would pass 
+by at least 4 sensors connected to the NEXYS A7-50T board and it's speeds (in each "sector" between sensors) would be calculated and 
+displayed on NEXYS's 7segment displays.
 
 <a name="hardware"></a>
 
