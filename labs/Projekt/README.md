@@ -8,7 +8,8 @@
    * Video presentation, 
    * Modules testing a description (real_switch and real_to_hex) 	
 * Matěj Černohous - Programming, Documentation
-   * Check english language 
+   * Check english language
+   * Comment TOP source code
 
 ### Table of contents
 
