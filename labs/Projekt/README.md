@@ -139,7 +139,7 @@ end architecture Behavioral;
 ```
 
 #### Simulation
-Distance between sensors is set to 0,0025 cm and time between detections is 2000 ns (0,002 ms), so we should get speed (0,002/0,000025) = cca 12 m/s. 
+Distance between sensors is set to 0,0025 cm and time between detections is 2000 ns (0,002 ms), so we should get speed (0,000025/0,000002) = approx. 12 m/s. 
 - [Simulation in EDAplayground](https://www.edaplayground.com/x/SycU)
 - You can see that we got a speed 12,02 m/s 
 
@@ -150,7 +150,7 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2000
 ## TOP module description and simulations
 
 ### Description
-We have 4 sensors connected to PMod pins JA1, JA2, JB1, JB2 -> we have 3 sections of speed measurement + average speed. Thats why **we use 4 _speed_measure_ modules**. Outputs from these modules go into **_real_switch_** module. Speed is shown on 7-segment display based on input combination of switches (multiplexor). Předtím je ale výstupní signál z **_real_switch_** přiveden do modulu **_real_to_hex_**, který transformuje reálné číslo na hexadecimální tvar (?asi?). Následuje modul **_driver_7seg_4digits_**, který vstupní hexadecimální data uzpůsobí pro zobrazení na 7 segmentový displej.
+By having 4 sensors connected to PMod pins JA1, JA2, JB1, JB2 we have 3 "sections" of speed measurement + average speed across all sectors. That's why **we use 4 _speed_measure_ modules**. Outputs from these modules go into **_real_switch_** module. Which of the 4 speeds is shown on the 7-segment display is determined by the combination of switches (principle of multiplexor). But before that the output signal from **_real_switch_** is inputted to the module **_real_to_hex_**, which tranforms the data type real signal to hexadecimal format (including the decimal point). The output signal of said module is then inputted to the module **_driver_7seg_4digits_**, which makes it possible for the data to be displayed on the 7segment display.
 
 | **Switches combination** | **Displayed speed** |
 | :-: | :-: |
