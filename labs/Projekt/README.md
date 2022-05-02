@@ -153,88 +153,101 @@ This module was supposed to replace the module speed_measure after figuring out 
 **Changes in generic variables**: 
 
   1. `g_dist` = now as an unsigned with 5 bits (up to 31 cm - more than length of our connector cables)
-  2. `g_active` = no change
-  3. `g_clk_f` = now as an unsigned with 27 bits (up to ~ 134*10^6 - more than the board main clock's frequency)
+  2. `g_clk_f` = now as an unsigned with 27 bits (up to ~ 134*10^6 - more than the board main clock's frequency)
 
-![Speed_measure](images/Modules/Speed_measure.png)
+**Changes in output**:
 
+  `v_o` = now a 32 bit logic vector (why 32 bits -> see local variable `s_help`)
+  
+**Changes in local variables**:
+   
+   1. `s_v` = 32 bit unsigned number used for speed calculation, later converted to logic vector as the module's output
+   2. `s_help` = replacement of `c_cmT_to_ms` - 32 bits needed because multiplying two binary numbers of M & N bits requires M+N bits (27+5 = 32)
+
+**Changes in speed calculation**:
+  
+  Speed is now calculated by taking advantage of the fact that when a number is shifted by X bits, it is equivalent to deviding that number by 2^X. We do of course 
+  lose some precision, but since the displayed speed is in range of 00.00 ÷ 99.99 m/s the units of cm/s are sufficient.
+
+**Change comparison**:
+
+![Speed_measure_logic comparison 1](images/speed_measure_logic/speed_measure_logic_1.png)
+![Speed_measure_logic comparison 2](images/speed_measure_logic/speed_measure_logic_1.png)
 
 ```vhdl
 ------------------------------------------------------------
--- Architecture declaration for speed measurer
+-- Architecture declaration for speed measurer logic
 ------------------------------------------------------------
-architecture Behavioral of speed_measure is
+aarchitecture Behavioral of speed_measure_logic is
 
-    -- Local counter
-    signal s_cnt        : natural := 0; 
-   
-    -- Local signal indicating measurement status
+
+    signal s_cnt        : natural := 1; 
     signal s_meas     : std_logic := '0';
     
-    -- Constant - converting measured [cm/clock_period] to [m/s]
-   	constant c_cmT_to_ms : real := Real(g_clk_f)/100.0;
+    signal s_v : unsigned(32 - 1 downto 0);
+    signal s_help : unsigned(32 - 1 downto 0) := g_clk_f*g_dist
 
 begin
 
-	--------------------------------------------------------
-    -- p_measure:
-    -- The sequential process with synchronous reset. Begins
-    -- measurement at active en_i signal and end it at active
-    -- dis_i.
-    --------------------------------------------------------
     p_measure : process(clk)
     begin
     
         if rising_edge(clk) then
         
-		if (reset = '1') then -- Synchronous reset
-        		s_meas <= '0'; -- reset measurement status
-                	s_cnt <= 0; -- reset counter
-			v_o <= 0.0; -- set output speed to 0
-		else
+        	-- Reset_i
+        	if (reset_i = '1') then
+        		s_meas <= '0';
+                s_cnt <= 0;
+			s_v <= "00000000000000000000000000000000";
+            else
         
-		      -- When en_i signal becomes active and measurement status s_meas
-		      -- is '0' we set it to '1' and reset counter and output.
-		      -- BEGIN MREASUREMENT
-		      if (en_i = g_active) then
-			  if (s_meas = '0') then
-			      s_meas <= '1';
-			      s_cnt <= 1;
-						  v_o <= 0.0;
-			  end if;
-		      end if;
+              if (en_i = '1') then
+                  if (s_meas = '0') then
+                      s_meas <= '1';
+                      s_cnt <= 1;
+		      s_v <= "00000000000000000000000000000000";
+                  end if;
+              end if;
 
-		      -- When dis_i signal becomes active and s_meas is '1' we set it to
-              	      -- '0' and calculate the output speed
-              	      -- END MREASUREMENT
-		      if (dis_i = g_active) then
-			  if (s_meas = '1') then
-			      s_meas <= '0';
-			      -- speed calculation: (distance)/(time)*conversion [m/s]
-			      v_o <= ((g_dist) / Real(s_cnt))*c_cmT_to_ms;
-			      --v_o <= (g_dist *c_cmT_to_ms) / Real(s_cnt);
-			  end if;
-		      end if;
+              if (dis_i = g_active) then
+                  if (s_meas = '1') then
+                      s_meas <= '0';
+                      	-- Calculating speed
+                        -- Division by shifting the bits
+                        if(s_cnt >= 4294967296) then -- 2^32
+                        	s_v <= shift_right(s_help, 32);
+                        elsif (s_cnt >= 2147483648) then -- 2^31
+                        	s_v <= shift_right(s_help, 31); 
+                       	-- ...
+                        -- other cases
+                        -- ...
+                        elsif (s_cnt >= 4) then -- 2^2
+                        	s_v <= shift_right(s_help, 2);
+                        elsif (s_cnt >= 2) then -- 2^1
+                        	s_v <= shift_right(s_help, 1);
+                       	end if; -- Shifting
+                  end if; -- s_meas = '1'
+              end if; -- dis_i = '1'
 
-		      -- When measurement status is '1' we increment the local counter
-                      -- COUNTER++
-		      if (s_meas = '1') then
-			  s_cnt <= s_cnt + 1;
-		      end if;
-              
-                end if; -- Synchronous reset
-      	end if; -- Rising edge
-     end process p_measure;
+              if (s_meas = '1') then
+                  s_cnt <= s_cnt + 1;
+              end if;
+          end if;
+      end if;
+      end process p_measure;
+      
+       v_o <= std_logic_vector(s_v);
     
 end architecture Behavioral;
 ```
 
 #### Simulation
-Distance between sensors is set to 0,0025 cm and time between detections is 2080 ns (0,00208 ms), so we should get speed (0,000025/0,00000208) = approx. 12,019 m/s. 
-- [Simulation in EDAplayground](https://www.edaplayground.com/x/SycU)
-- You can see that we got a speed ~ 12,02 m/s 
+During the simulation we expected an unknown error that we weren't able to fix. For the lack of time to consult this problem with the project assignee, we were 
+unable to implement this module into the final version of the project.
+- [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
 
-![Speed_measure simulation](images/Simulations/speed_measure.png)
+
+![Speed_measure_logic simulation error](images/speed_measure_logic/error.png)
 
 <a name="top"></a>
 
