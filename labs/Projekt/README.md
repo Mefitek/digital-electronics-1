@@ -263,13 +263,18 @@ unable to implement this module into the final version of the project.
 | 10 | Speed by 2. Sensor |
 | 11 | Speed by 1. Sensor |
 
-Real switch module is similar to Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i` and one output `r_o` which is always one of the inputs as you can see on the simulation wave. In the wave is shown that we switch between inputs every 100 ns. 
+Real switch module is similar to Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i` and one output `r_o` which is always one of the inputs as you can see on the simulation wave. In the wave is shown that we switch between inputs every 100 ns. On the inputs are bring the outpust signals from every speed measure module and output signal goes to the convertor real_to_hex.
 
 ![Real switch](images/Simulations/real_switch.png) 
 
+| **Switches combination** | **Displayed speed** |
+| :-: | :-: |
+| 00 | Speed by 4. Sensor |
+| 01 | Speed by 3. Sensor |
+| 10 | Speed by 2. Sensor |
+| 11 | Speed by 1. Sensor |
 
-On the inputs are bring the outpust signals from every speed measure module and output signal goes to the convertor real_to_hex.
-
+In the table is shown what means every combinations of switches.
 
 ### Real_to_hex
 
