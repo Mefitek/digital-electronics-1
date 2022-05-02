@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
 
-entity speed_measure is
+entity speed_measure_logic is
 	 generic(
         g_DIST 		: unsigned(5 - 1 downto 0) := to_unsigned(20,5);
         g_CLK_F		: unsigned(27 - 1 downto 0) := to_unsigned(100000000,27)
@@ -20,9 +20,9 @@ entity speed_measure is
         
     
     );
-end entity speed_measure;
+end entity speed_measure_logic;
 
-architecture Behavioral of speed_measure is
+architecture Behavioral of speed_measure_logic is
 
 
     signal s_cnt        : natural := 1; 
@@ -44,14 +44,14 @@ begin
         	if (reset_i = '1') then
         		s_meas <= '0';
                 s_cnt <= 0;
-				v_o <= "000000000000000000000000000";
+				v_o <= "00000000000000000000000000000000";
             else
         
               if (en_i = '1') then
                   if (s_meas = '0') then
                       s_meas <= '1';
                       s_cnt <= 1;
-					  s_V <= "000000000000000000000000000";
+					  s_V <= "00000000000000000000000000000000";
                   end if;
               end if;
 
@@ -61,16 +61,16 @@ begin
                       	-- Calculating speed
                         -- Division by shifting the bits
                         if(s_cnt >= 4294967296) then -- 2^32
-                        	shift_right(s_help, 32);
+                        	s_v <= shift_right(s_help, 32);
                         elsif (s_cnt >= 2147483648) then -- 2^31
-                        	shift_right(s_help, 31); 
+                        	s_v <= shift_right(s_help, 31); 
                        	-- ...
                         -- other cases
                         -- ...
                         elsif (s_cnt >= 4) then -- 2^2
-                        	shift_right(s_help, 2);
+                        	s_v <= shift_right(s_help, 2);
                         elsif (s_cnt >= 2) then -- 2^1
-                        	shift_right(s_help, 1);
+                        	s_v <= shift_right(s_help, 1);
                        	end if; -- Shifting
                   end if; -- s_meas = '1'
               end if; -- dis_i = '1'
