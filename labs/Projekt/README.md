@@ -268,7 +268,7 @@ begin
           v_o	 => s_r3
       );
 
-	speed_measure_avg : entity work.speed_measure
+    speed_measure_avg : entity work.speed_measure
       generic map(
           g_dist => 70.0;
 	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
@@ -282,20 +282,20 @@ begin
           v_o	 => s_ravg
       );
       
-	speed_real_switch  : entity work.real_switch
-		port map(
+     speed_real_switch  : entity work.real_switch
+       port map(
       
-			clk   => CLK100MHZ,
-			
-			r1_i => s_v1,
-			r2_i => s_v2,
-			r3_i => s_v3,
-			r4_i  => s_v,
-			
-			s1_i => SW(0),
-			s2_i => SW(1),
-	 
-			r_o => s_r
+	  clk   => CLK100MHZ,
+
+	  r1_i => s_v1,
+	  r2_i => s_v2,
+	  r3_i => s_v3,
+	  r4_i  => s_v,
+
+	  s1_i => SW(0),
+	  s2_i => SW(1),
+
+	  r_o => s_r
       
       );
     --------------------------------------------------------------------
@@ -303,16 +303,16 @@ begin
     --------------------------------------------------------------------
     -- Instance (copy) of real_to_hex entity 
     speed_real_convert : entity work.real_to_hex
-		port map(
+        port map(
       
-			clk   => CLK100MHZ,
-			
-			real_i  => s_r,
-			data0_o => s_data0,
-			data1_o => s_data1,
-			data2_o => s_data2,
-			data3_o => s_data3,
-			dp_o    => s_dp
+	  clk   => CLK100MHZ,
+
+	  real_i  => s_r,
+	  data0_o => s_data0,
+	  data1_o => s_data1,
+	  data2_o => s_data2,
+	  data3_o => s_data3,
+	  dp_o    => s_dp
 		);
     
     --------------------------------------------------------------------
