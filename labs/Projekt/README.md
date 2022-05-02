@@ -275,12 +275,12 @@ In the table is shown what means every combinations of switches.
 
 This module Real_to_hex is necessary to convert of real number to hexadecimal number. The display cannot work with real number so we must convert it. This module have one input `real_i` and four outputs `data0_o`, `data1_o`, `data2_o`, `data3_o`. On the input is bring the output signal from Real_switch module (one of the four speed). Output signals goes to 7 digits display module. 
 
-# Algoritm
+#### Algoritm
 
 ![real to hex](images/constants.png) ![real to hex](images/floor.png)
 ![real to hex](images/elseif.png) ![real to hex](images/tenths.png) ![real to hex](images/hundreths.png)
 
-# Simulation
+#### Simulation
 
 In the simulation wave is shown input signal like real number and the converted output signals like hexadecimal numbers.
 
