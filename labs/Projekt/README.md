@@ -150,7 +150,7 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2000
 ## TOP module description and simulations
 
 ### Description
-We have 4 sensors connected to PMod pins JA1, JA2, JB1, JB2 -> we have 3 sections of speed measurement + average speed. Thats why **we use 4 _speed_measure_ modules**. Outputs from these modules go into **_real_switch_** module. Speed is shown on 7-segment display based on input combination of switches
+We have 4 sensors connected to PMod pins JA1, JA2, JB1, JB2 -> we have 3 sections of speed measurement + average speed. Thats why **we use 4 _speed_measure_ modules**. Outputs from these modules go into **_real_switch_** module. Speed is shown on 7-segment display based on input combination of switches (multiplexor). Předtím je ale výstupní signál z **_real_switch_** přiveden do modulu **_real_to_hex_**, který transformuje reálné číslo na hexadecimální tvar (?asi?). Následuje modul **_driver_7seg_4digits_**, který vstupní hexadecimální data uzpůsobí pro zobrazení na 7 segmentový displej.
 
 | **Switches combination** | **Displayed speed** |
 | :-: | :-: |
