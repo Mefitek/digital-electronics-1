@@ -273,12 +273,24 @@ In the table is shown what means every combinations of switches.
 
 ![real to hex](images/Simulations/real_to_hex_block.png)
 
-This module Real_to_hex is necessary to convert of real number to hexadecimal number. The display cannot work with real number so we must convert it. This module have one input `real_i` and four outputs `data0_o`, `data1_o`, `data2_o`, `data3_o`. On the input is bring the output signal from Real_switch module (one of the four speed). Output signals goes to 7 digits display module. 
+This module Real_to_hex is necessary to convert of real number to hexadecimal number. The display cannot work with real number so we must convert it. This module have one input `real_i` and five outputs `data0_o`, `data1_o`, `data2_o`, `data3_o` and `dp_o`. On the input is bring the output signal from Real_switch module (one of the four speed). Output signals goes to 7 digits display module. `dp_o` represent decimal point in real number.
 
 #### Algoritm
 
-![real to hex](images/constants.png) ![real to hex](images/floor.png)
-![real to hex](images/elseif.png) ![real to hex](images/tenths.png) ![real to hex](images/hundreths.png)
+![real to hex](images/constantsss.png)
+Tohle dela tohle
+
+![real to hex](images/floor.png)
+tady tohle zase tamto
+
+![real to hex](images/elseif.png)
+tohel zase něco dalsiho
+
+![real to hex](images/tenths.png)
+tohle uz ani nevim co
+
+![real to hex](images/hundreths.png)
+tohle nejakou hausovinu
 
 #### Simulation
 
