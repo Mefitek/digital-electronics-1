@@ -71,8 +71,8 @@ begin
                         elsif (s_cnt >= 2) then -- 2^1
                         	s_v <= shift_right(s_help, 1);
                        	end if; -- Shifting
-                  end if; -- s_meas = '1'
-              end if; -- dis_i = '1'
+                  end if; -- s_meas
+              end if; -- dis_i
 
               if (s_meas = '1') then
                   s_cnt <= s_cnt + 1;
