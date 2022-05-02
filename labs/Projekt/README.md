@@ -145,6 +145,97 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 
 ![Speed_measure simulation](images/Simulations/speed_measure.png)
 
+### Speed_measure_logic
+
+#### Description
+This module was supposed to replace the module speed_measure after figuring out that program using data type real cannot be synthetized (therefore cannot be uploaded onto the board). As can be seen on the images bellow, the only real differences were different data types and different calculation of final speed.
+
+**Changes in generic variables**: 
+
+  1. `g_dist` = now as an unsigned with 5 bits (up to 31 cm - more than length of our connector cables)
+  2. `g_active` = no change
+  3. `g_clk_f` = now as an unsigned with 27 bits (up to ~ 134*10^6 - more than the board main clock's frequency)
+
+![Speed_measure](images/Modules/Speed_measure.png)
+
+
+```vhdl
+------------------------------------------------------------
+-- Architecture declaration for speed measurer
+------------------------------------------------------------
+architecture Behavioral of speed_measure is
+
+    -- Local counter
+    signal s_cnt        : natural := 0; 
+   
+    -- Local signal indicating measurement status
+    signal s_meas     : std_logic := '0';
+    
+    -- Constant - converting measured [cm/clock_period] to [m/s]
+   	constant c_cmT_to_ms : real := Real(g_clk_f)/100.0;
+
+begin
+
+	--------------------------------------------------------
+    -- p_measure:
+    -- The sequential process with synchronous reset. Begins
+    -- measurement at active en_i signal and end it at active
+    -- dis_i.
+    --------------------------------------------------------
+    p_measure : process(clk)
+    begin
+    
+        if rising_edge(clk) then
+        
+		if (reset = '1') then -- Synchronous reset
+        		s_meas <= '0'; -- reset measurement status
+                	s_cnt <= 0; -- reset counter
+			v_o <= 0.0; -- set output speed to 0
+		else
+        
+		      -- When en_i signal becomes active and measurement status s_meas
+		      -- is '0' we set it to '1' and reset counter and output.
+		      -- BEGIN MREASUREMENT
+		      if (en_i = g_active) then
+			  if (s_meas = '0') then
+			      s_meas <= '1';
+			      s_cnt <= 1;
+						  v_o <= 0.0;
+			  end if;
+		      end if;
+
+		      -- When dis_i signal becomes active and s_meas is '1' we set it to
+              	      -- '0' and calculate the output speed
+              	      -- END MREASUREMENT
+		      if (dis_i = g_active) then
+			  if (s_meas = '1') then
+			      s_meas <= '0';
+			      -- speed calculation: (distance)/(time)*conversion [m/s]
+			      v_o <= ((g_dist) / Real(s_cnt))*c_cmT_to_ms;
+			      --v_o <= (g_dist *c_cmT_to_ms) / Real(s_cnt);
+			  end if;
+		      end if;
+
+		      -- When measurement status is '1' we increment the local counter
+                      -- COUNTER++
+		      if (s_meas = '1') then
+			  s_cnt <= s_cnt + 1;
+		      end if;
+              
+                end if; -- Synchronous reset
+      	end if; -- Rising edge
+     end process p_measure;
+    
+end architecture Behavioral;
+```
+
+#### Simulation
+Distance between sensors is set to 0,0025 cm and time between detections is 2080 ns (0,00208 ms), so we should get speed (0,000025/0,00000208) = approx. 12,019 m/s. 
+- [Simulation in EDAplayground](https://www.edaplayground.com/x/SycU)
+- You can see that we got a speed ~ 12,02 m/s 
+
+![Speed_measure simulation](images/Simulations/speed_measure.png)
+
 <a name="top"></a>
 
 ## TOP module description and simulations
