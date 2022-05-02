@@ -279,11 +279,11 @@ This module Real_to_hex is necessary to convert of real number to hexadecimal nu
 
 ![real to hex](images/constantsss.png)
 
-Tohle dela tohle
+The main algoritm starts with ten constants which are necessary for ....
 
 ![real to hex](images/floor.png)
 
-tady tohle zase tamto
+Here is the first option 
 
 ![real to hex](images/elseif.png)
 
