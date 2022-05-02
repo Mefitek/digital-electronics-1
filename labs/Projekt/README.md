@@ -277,8 +277,8 @@ This module Real_to_hex is necessary to convert of real number to hexadecimal nu
 
 # Algoritm
 
-![real to hex](images/Simulations/constants.png) ![real to hex](images/Simulations/floor.png)
-![real to hex](images/Simulations/elseif.png) ![real to hex](images/Simulations/tenths.png) ![real to hex](images/Simulations/hundreths.png)
+![real to hex](images/constants.png) ![real to hex](images/floor.png)
+![real to hex](images/elseif.png) ![real to hex](images/tenths.png) ![real to hex](images/hundreths.png)
 
 # Simulation
 
