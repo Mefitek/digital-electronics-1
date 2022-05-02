@@ -93,44 +93,44 @@ begin
     
         if rising_edge(clk) then
         
-        	if (reset = '1') then -- Synchronous reset
+		if (reset = '1') then -- Synchronous reset
         		s_meas <= '0'; -- reset measurement status
-                s_cnt <= 0; -- reset counter
-				v_o <= 0.0; -- set output speed to 0
-            else
+                	s_cnt <= 0; -- reset counter
+			v_o <= 0.0; -- set output speed to 0
+		else
         
-        	  -- When en_i signal becomes active and measurement status s_meas
-              -- is '0' we set it to '1' and reset counter and output.
-              -- BEGIN MREASUREMENT
-              if (en_i = g_active) then
-                  if (s_meas = '0') then
-                      s_meas <= '1';
-                      s_cnt <= 1;
-					  v_o <= 0.0;
-                  end if;
-              end if;
+		      -- When en_i signal becomes active and measurement status s_meas
+		      -- is '0' we set it to '1' and reset counter and output.
+		      -- BEGIN MREASUREMENT
+		      if (en_i = g_active) then
+			  if (s_meas = '0') then
+			      s_meas <= '1';
+			      s_cnt <= 1;
+						  v_o <= 0.0;
+			  end if;
+		      end if;
 
-		  	  -- When dis_i signal becomes active and s_meas is '1' we set it to
-              -- '0' and calculate the output speed
-              -- END MREASUREMENT
-              if (dis_i = g_active) then
-                  if (s_meas = '1') then
-                      s_meas <= '0';
-                      -- speed calculation: (distance)/(time)*conversion [m/s]
-                      v_o <= ((g_dist) / Real(s_cnt))*c_cmT_to_ms;
-                      --v_o <= (g_dist *c_cmT_to_ms) / Real(s_cnt);
-                  end if;
-              end if;
+		      -- When dis_i signal becomes active and s_meas is '1' we set it to
+              	      -- '0' and calculate the output speed
+              	      -- END MREASUREMENT
+		      if (dis_i = g_active) then
+			  if (s_meas = '1') then
+			      s_meas <= '0';
+			      -- speed calculation: (distance)/(time)*conversion [m/s]
+			      v_o <= ((g_dist) / Real(s_cnt))*c_cmT_to_ms;
+			      --v_o <= (g_dist *c_cmT_to_ms) / Real(s_cnt);
+			  end if;
+		      end if;
 
-			  -- When measurement status is '1' we increment the local counter
-              -- COUNTER++
-              if (s_meas = '1') then
-                  s_cnt <= s_cnt + 1;
-              end if;
+		      -- When measurement status is '1' we increment the local counter
+                      -- COUNTER++
+		      if (s_meas = '1') then
+			  s_cnt <= s_cnt + 1;
+		      end if;
               
-          end if; -- Synchronous reset
-      end if; -- Rising edge
-      end process p_measure;
+                end if; -- Synchronous reset
+      	end if; -- Rising edge
+     end process p_measure;
     
 end architecture Behavioral;
 ```
