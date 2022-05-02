@@ -7,7 +7,7 @@ entity speed_measure_logic is
 	 generic(
         g_DIST 		: unsigned(5 - 1 downto 0) := to_unsigned(20,5);
         g_CLK_F		: unsigned(27 - 1 downto 0) := to_unsigned(100000000,27);
-        g_active : std_logic := '1';
+        g_active : std_logic := '1'
     );
 
     port(
