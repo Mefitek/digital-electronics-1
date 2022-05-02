@@ -171,8 +171,8 @@ This module was supposed to replace the module speed_measure after figuring out 
 
 **Change comparison**:
 
-![Speed_measure_logic comparison 1](images/speed_measure_logic/speed_measure_logic_1.png)
-![Speed_measure_logic comparison 2](images/speed_measure_logic/speed_measure_logic_1.png)
+![Speed_measure_logic comparison 1](images/speed_measure_logic/speed_measure_logic1.png)
+![Speed_measure_logic comparison 2](images/speed_measure_logic/speed_measure_logic2.png)
 
 ```vhdl
 ------------------------------------------------------------
