@@ -10,15 +10,12 @@ entity speed_measure is
     );
 
     port(
-    	
         clk         : in  std_logic;
         en_i        : in  std_logic;
         dis_i       : in  std_logic;
         reset_i     : in  std_logic;
         
         v_o	        : out std_logic_vector(32 - 1 downto 0)
-        
-    
     );
 end entity speed_measure;
 
@@ -26,11 +23,9 @@ architecture Behavioral of speed_measure is
 
 
     signal s_cnt        : natural := 1; 
-   
     signal s_meas     : std_logic := '0';
     
     signal s_v : unsigned(32 - 1 downto 0);
-    
     signal s_help : unsigned(32 - 1 downto 0) := g_CLK_F*g_DIST; 
 
 begin
