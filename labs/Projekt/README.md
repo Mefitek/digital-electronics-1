@@ -170,9 +170,10 @@ This module was supposed to replace the module speed_measure after figuring out 
   lose some precision, but since the displayed speed is in range of 00.00 ÷ 99.99 m/s the units of cm/s are sufficient.
 
 **Change comparison**:
+  Comparison of parts of the speed_measure module (on the left) and speed_measure_logic module (on the right) 
 
-![Speed_measure_logic comparison 1](images/speed_measure_logic/speed_measure_logic1.png)
-![Speed_measure_logic comparison 2](images/speed_measure_logic/speed_measure_logic2.png)
+![speed_measure_logic comparison 1](images/speed_measure_logic/speed_measure_logic1.png)
+![speed_measure_logic comparison 2](images/speed_measure_logic/speed_measure_logic2.png)
 
 ```vhdl
 ------------------------------------------------------------
