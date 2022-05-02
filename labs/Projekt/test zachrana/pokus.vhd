@@ -18,8 +18,6 @@ entity speed_measure_logic is
         reset_i     : in  std_logic;
         
         v_o	        : out std_logic_vector(32 - 1 downto 0)
-        
-    
     );
 end entity speed_measure_logic;
 
