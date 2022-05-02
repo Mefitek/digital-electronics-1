@@ -256,13 +256,6 @@ unable to implement this module into the final version of the project.
 
 ![Speed_measure](images/Simulations/real_switch_block.png) 
 
-| **Switches combination** | **Displayed speed** |
-| :-: | :-: |
-| 00 | Speed by 4. Sensor |
-| 01 | Speed by 3. Sensor |
-| 10 | Speed by 2. Sensor |
-| 11 | Speed by 1. Sensor |
-
 Real switch module is similar to Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i` and one output `r_o` which is always one of the inputs as you can see on the simulation wave. In the wave is shown that we switch between inputs every 100 ns. On the inputs are bring the outpust signals from every speed measure module and output signal goes to the convertor real_to_hex.
 
 ![Real switch](images/Simulations/real_switch.png) 
@@ -278,6 +271,18 @@ In the table is shown what means every combinations of switches.
 
 ### Real_to_hex
 
+![real to hex](images/Simulations/real_to_hex_block.png)
+
+This module Real_to_hex is necessary to convert of real number to hexadecimal number. The display cannot work with real number so we must convert it. This module have one input `real_i` and four outputs `data0_o`, `data1_o`, `data2_o`, `data3_o`. On the input is bring the output signal from Real_switch module (one of the four speed). Output signals goes to 7 digits display module. 
+
+# Algoritm
+
+![real to hex](images/Simulations/constants.png) ![real to hex](images/Simulations/floor.png)
+![real to hex](images/Simulations/elseif.png) ![real to hex](images/Simulations/tenths.png) ![real to hex](images/Simulations/hundreths.png)
+
+# Simulation
+
+In the simulation wave is shown input signal like real number and the converted output signals like hexadecimal numbers.
 
 ![real to hex](images/Simulations/real_to_hex.png)
 
