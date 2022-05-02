@@ -171,14 +171,14 @@ use ieee.numeric_std.all;
 ------------------------------------------------------------
 entity top is
     Port(
-		-- PMod pins
+	-- PMod pins
 		JA1 : in STD_LOGIC;
 		JA2 : in STD_LOGIC;
 		JB1 : in STD_LOGIC;
 		JB2 : in STD_LOGIC;
 
         -- Clock
-        CLK100MHZ : in STD_LOGIC;
+        	CLK100MHZ : in STD_LOGIC;
 
         -- Switches
 		SW 		  : in STD_LOGIC_VECTOR (1 downto 0);
@@ -226,7 +226,7 @@ begin
 	speed_measure_section_1 : entity work.speed_measure
       generic map(
           g_dist => 20.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -243,7 +243,7 @@ begin
     speed_measure_section_2 : entity work.speed_measure
       generic map(
           g_dist => 30.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -257,7 +257,7 @@ begin
     speed_measure_section_3 : entity work.speed_measure
       generic map(
           g_dist => 20.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -271,7 +271,7 @@ begin
 	speed_measure_avg : entity work.speed_measure
       generic map(
           g_dist => 70.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -323,7 +323,7 @@ begin
         
         port map(
             clk   		=> CLK100MHZ,
-           	reset		=> '0',
+	    reset		=> '0',
             
             data0_i(3 downto 0)	=> s_data0(3 downto 0),
             data1_i(3 downto 0)	=> s_data1(3 downto 0),
