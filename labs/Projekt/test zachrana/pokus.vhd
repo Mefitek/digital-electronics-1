@@ -25,11 +25,9 @@ architecture Behavioral of speed_measure_logic is
 
 
     signal s_cnt        : natural := 1; 
-   
     signal s_meas     : std_logic := '0';
     
     signal s_v : unsigned(32 - 1 downto 0);
-    
     signal s_help : unsigned(32 - 1 downto 0) := g_CLK_F*g_DIST; 
 
 begin
