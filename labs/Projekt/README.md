@@ -278,18 +278,23 @@ This module Real_to_hex is necessary to convert of real number to hexadecimal nu
 #### Algoritm
 
 ![real to hex](images/constantsss.png)
+
 Tohle dela tohle
 
 ![real to hex](images/floor.png)
+
 tady tohle zase tamto
 
 ![real to hex](images/elseif.png)
+
 tohel zase něco dalsiho
 
 ![real to hex](images/tenths.png)
+
 tohle uz ani nevim co
 
 ![real to hex](images/hundreths.png)
+
 tohle nejakou hausovinu
 
 #### Simulation
