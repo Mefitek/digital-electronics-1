@@ -166,17 +166,24 @@ use ieee.numeric_std.all;
 
 
 
+------------------------------------------------------------
+-- Entity declaration for top
+------------------------------------------------------------
 entity top is
     Port(
-		-- PMods
+		-- PMod pins
 		JA1 : in STD_LOGIC;
 		JA2 : in STD_LOGIC;
 		JB1 : in STD_LOGIC;
 		JB2 : in STD_LOGIC;
 
-        	CLK100MHZ : in STD_LOGIC;
-		SW  : in STD_LOGIC_VECTOR (1 downto 0);
+        -- Clock
+        CLK100MHZ : in STD_LOGIC;
+
+        -- Switches
+		SW 		  : in STD_LOGIC_VECTOR (1 downto 0);
 		
+        -- 7segment display cathodes
 		CA : out STD_LOGIC;
 		CB : out STD_LOGIC;
 		CC : out STD_LOGIC;
@@ -184,22 +191,29 @@ entity top is
 		CE : out STD_LOGIC;
 		CF : out STD_LOGIC;
 		CG : out STD_LOGIC;
+        -- 7segmet display decimal point
 		DP : out STD_LOGIC;
-		  
+		 
+        -- 7segment display anodes
 		AN : out STD_LOGIC_VECTOR (7 downto 0)  
     );
 end entity top;
 
-
+------------------------------------------------------------------------
+-- Architecture body for top level
+------------------------------------------------------------------------
 architecture Behavioral of top is
 
-  -- Interni signaly pro rychlost
+  -- Internal signals between speed_measure modules and real_switch
   signal s_r1       : real := 0.0 ;
   signal s_r2       : real := 0.0 ;
   signal s_r3       : real := 0.0 ;
   signal s_ravg     : real := 0.0 ;
+
+  -- Internal signal between real_switch and real_to_hex
   signal s_r        : real := 0.0 ;
   
+  -- Internal signal between real_to_hex and driver_7seg_4digits
   signal s_data0 : std_logic_vector(4 - 1 downto 0);
   signal s_data1 : std_logic_vector(4 - 1 downto 0);
   signal s_data2 : std_logic_vector(4 - 1 downto 0);
@@ -208,10 +222,11 @@ architecture Behavioral of top is
 
 begin	
 	--------------------------------------------------------------------
+    -- Instance (copy) of speed_measure entity (first)
 	speed_measure_section_1 : entity work.speed_measure
       generic map(
           g_dist => 20.0;
-	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -222,10 +237,13 @@ begin
           v_o	 => s_r1
       );
 	--------------------------------------------------------------------
+
+    --------------------------------------------------------------------
+    -- FOur instances (copie) of speed_measure entity
     speed_measure_section_2 : entity work.speed_measure
       generic map(
           g_dist => 30.0;
-	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -235,11 +253,11 @@ begin
 		  reset => JA1,
           v_o	 => s_r2
       );
-	--------------------------------------------------------------------
+
     speed_measure_section_3 : entity work.speed_measure
       generic map(
           g_dist => 20.0;
-	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -249,11 +267,11 @@ begin
 		  reset => JA1,
           v_o	 => s_r3
       );
-	--------------------------------------------------------------------
+
 	speed_measure_avg : entity work.speed_measure
       generic map(
           g_dist => 70.0;
-	  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -263,8 +281,8 @@ begin
           reset  => '0',
           v_o	 => s_ravg
       );
-    --------------------------------------------------------------------
-	speed_real_switch : entity work.real_switch
+      
+	speed_real_switch  : entity work.real_switch
 		port map(
       
 			clk   => CLK100MHZ,
@@ -280,7 +298,10 @@ begin
 			r_o => s_r
       
       );
-      
+    --------------------------------------------------------------------
+
+    --------------------------------------------------------------------
+    -- Instance (copy) of real_to_hex entity 
     speed_real_convert : entity work.real_to_hex
 		port map(
       
@@ -293,7 +314,11 @@ begin
 			data3_o => s_data3,
 			dp_o    => s_dp
 		);
-      
+    
+    --------------------------------------------------------------------
+    
+    --------------------------------------------------------------------
+    -- Instance (copy) of driver_7seg_4digits entity 
     speed_driver_7s : entity work.driver_7seg_4digits
         
         port map(
@@ -313,11 +338,13 @@ begin
             seg_o(4)	=> CC,
             seg_o(5)	=> CB,
             seg_o(6)	=> CA,
-            dp_o	=> DP,
+            dp_o		=> DP,
             dig_o(3 downto 0) => AN(3 downto 0)
         );
+    --------------------------------------------------------------------
         
 
+    -- Disconnect the unused part of the 7-segment display
         AN(7 downto 4) <= "1111";
 
 end architecture Behavioral;
