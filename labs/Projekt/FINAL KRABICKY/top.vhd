@@ -28,7 +28,9 @@ entity top is
     );
 end entity top;
 
-
+------------------------------------------------------------------------
+-- Architecture body for top level
+------------------------------------------------------------------------
 architecture Behavioral of top is
 
   -- Interni signaly pro rychlost
