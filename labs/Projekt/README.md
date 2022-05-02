@@ -60,10 +60,13 @@ as "Active LOW" - meaning that when no reflected light is recieved the data outp
 
 #### Description
 As the name of module suggests this module measures speed of any object using 2 inputs for [IR sensors](#sensors), which are connected to `en_i` and `dis_i` inpusts. Module has **3 generic variables**: 
+
   1. `g_dist` = distance between sensors in cm, we work with it in [TOP](#top)
   2. `g_active` = it represents active state of sensors (we use g_active = 1 for simulations)
   3. `g_clk_f` = clock frequency
+
 ![Speed_measure](images/Modules/Speed_measure.png)
+
 
 ```vhdl
 ------------------------------------------------------------
