@@ -6,9 +6,9 @@ use ieee.numeric_std.all;
 -- Entity declaration for speed calculator
 --
 --             +---------------------+
---             | g_sector_1 = 20     |
---             | g_sector_2 = 20     |
---             | g_sector_3 = 20     |
+--             | g_sector_1 = 20.0   |
+--             | g_sector_2 = 20.0   |
+--             | g_sector_3 = 20.0   |
 --             | g_sens_active = '1' |
 --             | g_clk_freq = 10^8   |
 --             |                     |
@@ -38,9 +38,9 @@ use ieee.numeric_std.all;
 entity speed_calc is
 
 	generic(
-        g_sector_1 	: natural := 20; -- Length - sector between sensors 1 and 2 [cm]
-     	g_sector_2 	: natural := 20; -- Between 2 and 3 [cm]
-      	g_sector_3 	: natural := 20; -- Between 3 and 4 [cm]
+        g_sector_1 	: real := 0.0025; -- Length - sector between sensors 1 and 2 [cm]
+     	g_sector_2 	: real := 0.0025; -- Between 2 and 3 [cm]
+      	g_sector_3 	: real := 0.0025; -- Between 3 and 4 [cm]
         g_sens_active : std_logic := '1'; -- Whether the sensors are active HIGH or LOW
         g_clk_freq : natural := 100000000  -- Main clock frequency [Hz]
     );
@@ -98,7 +98,7 @@ architecture Behavioral of speed_calc is
     signal s_reset      : std_logic := '0';
 
     -- Constant - sum of sector lengths (for code clarity)
-    constant c_SECTOR 	: natural := (g_SECTOR_1 + g_SECTOR_2 + g_SECTOR_3);
+    constant c_SECTOR 	: real := (g_SECTOR_1 + g_SECTOR_2 + g_SECTOR_3);
     
     -- Constant - converting measured [cm/clock_period] to [m/s]
    	constant c_cmT_to_ms : real := Real(g_clk_freq)/100.0;
@@ -167,7 +167,7 @@ begin
                           s_cnt_1 <= s_cnt_1 + 1;
                       else
                       	  -- calculating speed: length/time * conversion
-                          speed_1_o <= (Real(g_SECTOR_1) / Real(s_cnt_1))*c_cmT_to_ms;
+                          speed_1_o <= ((g_SECTOR_1) / Real(s_cnt_1))*c_cmT_to_ms;
                           s_state <= L_SECTOR_2;
                       end if;
 
@@ -178,7 +178,7 @@ begin
                       if(sensor_3_i = c_INACTIVE) then
                           s_cnt_2 <= s_cnt_2 + 1;
                       else
-                          speed_2_o <= (Real(g_SECTOR_2) / Real(s_cnt_2))*c_cmT_to_ms;
+                          speed_2_o <= ((g_SECTOR_2) / Real(s_cnt_2))*c_cmT_to_ms;
                           s_state <= L_SECTOR_3;
                       end if;
                       
@@ -191,9 +191,9 @@ begin
                       if(sensor_4_i = c_INACTIVE) then
                           s_cnt_3 <= s_cnt_3 + 1;
                       else
-                          speed_3_o <= (Real(g_SECTOR_3) / Real(s_cnt_3))*c_cmT_to_ms;
+                          speed_3_o <= ((g_SECTOR_3) / Real(s_cnt_3))*c_cmT_to_ms;
                           -- calculating average speed: (sum of lengths)/(sum of times)*conversion
-                          speed_o	<= ( Real(c_SECTOR) / (Real(s_cnt_3) + Real(s_cnt_2) + Real(s_cnt_1)))*c_cmT_to_ms;
+                          speed_o	<= ( (c_SECTOR) / (Real(s_cnt_3) + Real(s_cnt_2) + Real(s_cnt_1)))*c_cmT_to_ms;
                           s_reset <= '1';
                           s_state <= L_WAIT;
                       end if;
@@ -214,7 +214,7 @@ begin
                       if(sensor_3_i = c_INACTIVE) then
                           s_cnt_3 <= s_cnt_3 + 1;
                       else
-                          speed_3_o <= (Real(g_SECTOR_3) / Real(s_cnt_3))*c_cmT_to_ms;
+                          speed_3_o <= ((g_SECTOR_3) / Real(s_cnt_3))*c_cmT_to_ms;
                           s_state <= R_SECTOR_2;
                      end if;
 
@@ -224,7 +224,7 @@ begin
                       if(sensor_2_i = c_INACTIVE) then
                           s_cnt_2 <= s_cnt_2 + 1;
                       else
-                          speed_2_o <= (Real(g_SECTOR_2) / Real(s_cnt_2))*c_cmT_to_ms;
+                          speed_2_o <= ((g_SECTOR_2) / Real(s_cnt_2))*c_cmT_to_ms;
                           s_state <= R_SECTOR_1;
                       end if;
                   
@@ -234,8 +234,8 @@ begin
                       if(sensor_1_i = c_INACTIVE) then
                           s_cnt_1 <= s_cnt_1 + 1;
                       else
-                          speed_1_o <= (Real(g_SECTOR_1) / Real(s_cnt_1))*c_cmT_to_ms;
-                          speed_o	<= ( Real(c_SECTOR) / Real(s_cnt_3+s_cnt_2+s_cnt_1))*c_cmT_to_ms;
+                          speed_1_o <= ((g_SECTOR_1) / Real(s_cnt_1))*c_cmT_to_ms;
+                          speed_o	<= ( (c_SECTOR) / Real(s_cnt_3+s_cnt_2+s_cnt_1))*c_cmT_to_ms;
                           s_reset <= '1';
                           s_state <= R_WAIT; -- probiha mereni, ZPRAVA
                       end if;

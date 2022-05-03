@@ -115,7 +115,7 @@ Depending on the rounded value the output of that spicific order is set to the a
 
 #### Simulation
 
-In the simulation wave is shown input signal like real number and the converted output signals like hexadecimal numbers.
+In the simulation we can see that data type real number is converted to 4 decimal numbers and decimal point's information.
 
 - [EDAplayground link](https://www.edaplayground.com/x/uEgg)
 ![real to hex simulation](images/Simulations/real_to_hex.png)
@@ -156,16 +156,16 @@ This module was supposed to replace the module speed_measure after figuring out 
 **Change comparison**:
   Comparison of parts of the speed_measure module (on the left) and speed_measure_logic module (on the right) 
 
-![speed_measure_logic comparison 1](images/speed_measure_logic/speed_measure_logic1.png)
-![speed_measure_logic comparison 2](images/speed_measure_logic/speed_measure_logic2.png)
+![speed_measure_logic comparison 1](images/modules/speed_measure_logic/speed_measure_logic1.png)
+![speed_measure_logic comparison 2](images/modules/speed_measure_logic/speed_measure_logic2.png)
 
 #### Simulation
-During the simulation we encountered an unknown error that we weren't able to fix. For the lack of time to consult this problem with the project assignee, we were 
-unable to implement this module into the final version of the project.
+The simulation shows activating signals in order 1234 and that reverse (4321), the speed is calculated as a data type real number.
+
 - [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
 
 
-![Speed_measure_logic simulation error](images/speed_measure_logic/error.png)
+![Speed_measure_logic simulation error](images/speed_measure_logic.png)
 
 
 ### Speed_calc
@@ -177,38 +177,15 @@ This module was created as an alternative to the 4 `speed_meas` modules. It's ad
 
 [speed_calc.vhd](modules/speed_calc.vhd)
 
-**Changes in generic variables**: 
-
-  1. `g_dist` = now as an unsigned with 5 bits (up to 31 cm - more than length of our connector cables)
-  2. `g_clk_f` = now as an unsigned with 27 bits (up to ~ 134*10^6 - more than the board main clock's frequency)
-
-**Changes in output**:
-
-  `v_o` = now a 32 bit logic vector (why 32 bits -> see local variable `s_help`)
-  
-**Changes in local variables**:
-   
-   1. `s_v` = 32 bit unsigned number used for speed calculation, later converted to logic vector as the module's output
-   2. `s_help` = replacement of `c_cmT_to_ms` - 32 bits needed because multiplying two binary numbers of M & N bits requires M+N bits (27+5 = 32)
-
-**Changes in speed calculation**:
-  
-  Speed is now calculated by taking advantage of the fact that when a number is shifted by X bits, it is equivalent to deviding that number by 2^X. We do of course 
-  lose some precision, but since the displayed speed is in range of 00.00 ÷ 99.99 m/s the units of cm/s are sufficient.
-
-**Change comparison**:
-  Comparison of parts of the speed_measure module (on the left) and speed_measure_logic module (on the right) 
-
-![speed_measure_logic comparison 1](images/speed_measure_logic/speed_measure_logic1.png)
-![speed_measure_logic comparison 2](images/speed_measure_logic/speed_measure_logic2.png)
+#### Changes
+As can be seen in the [code](modules/speed_calc.vhd) the measuring is done by switching between different states which represent in which sector an from what direction the object is moving.
 
 #### Simulation
-During the simulation we encountered an unknown error that we weren't able to fix. For the lack of time to consult this problem with the project assignee, we were 
-unable to implement this module into the final version of the project.
-- [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
+
+- [EDAplayground link](https://www.edaplayground.com/x/SMVi)
 
 
-![Speed_measure_logic simulation error](images/speed_measure_logic/error.png)
+![Speed_measure_logic simulation error](images/simulations/speed_calc.png)
 
 
 <a name="top"></a>
