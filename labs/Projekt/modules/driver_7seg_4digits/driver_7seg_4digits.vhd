@@ -1,14 +1,3 @@
-------------------------------------------------------------
---
--- Driver for 4-digit 7-segment display.
--- Nexys A7-50T, Vivado v2020.1.1, EDA Playground
---
--- Copyright (c) 2020-Present Tomas Fryza
--- Dept. of Radio Electronics, Brno Univ. of Technology, Czechia
--- This work is licensed under the terms of the MIT license.
---
-------------------------------------------------------------
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -123,9 +112,9 @@ begin
             else
                 case s_cnt is
                     when "11" =>
-                        s_hex <= data3_i; -- prirazeni dat do segmentovky
-                        dp_o  <= dp_i(3); -- zda sviti desetinna tecka
-                        dig_o <= "0111"; -- ktera segmentovka sepnuta
+                        s_hex <= data3_i;
+                        dp_o  <= dp_i(3);
+                        dig_o <= "0111";
 
                     when "10" =>
                         s_hex <= data2_i;
