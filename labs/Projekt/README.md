@@ -275,9 +275,9 @@ The table shows the relation of controlling inputs and output.
 ![real to hex](images/Simulations/real_to_hex_block.png)
 
 This modules!s function is to convert a data type real number into a hexadecimal number (including the decimal point). The module's input `real_i` is converted (through function floor() from the `ieee.math_real` library). 
-It is important to note that the conversion code is nowhere neal ideal and conventional, since working with the data type real variables is somewhat tricky. It would be favorable to use custom functions  
-
-This module Real_to_hex is necessary to convert of real number to hexadecimal number. The display cannot work with real number so we must convert it. This module have one input `real_i` and five outputs `data0_o`, `data1_o`, `data2_o`, `data3_o` and `dp_o`. On the input is bring the output signal from Real_switch module (one of the four speed). Output signals goes to 7 digits display module. `dp_o` represent decimal point in real number.
+It is important to note that the conversion code is nowhere neal ideal and conventional, since working with the data type real variables is somewhat tricky. It would be favorable to use custom functions for the calculations. 
+The range of outputted hexadecimal number was decided to be "XX.XX" - which meant we would be able to display speeds between 0.01 - 99.99 m/s. The output `dp_o` represents the decimal point's position and outputs 
+`data0_o`, `data1_o`, `data2_o`, `data3_o` represent the particular decimals.
 
 #### Algoritm
 
