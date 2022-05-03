@@ -206,12 +206,12 @@ As can be seen in the [code](modules/speed_calc.vhd) the measuring is done by sw
 
 ## TOP module description and simulations
 
+### Description
+By having 4 sensors connected to PMod pins JA1, JA2, JB1, JB2 we have 3 "sections" of speed measurement + average speed across all sectors. That's why **we use 4 _speed_measure_ modules**. Outputs from these modules go into **_real_switch_** module. Which of the 4 speeds is shown on the 7-segment display is determined by the combination of switches (principle of multiplexor). But before that the output signal from **_real_switch_** is inputted to the module **_real_to_hex_**, which tranforms the data type real signal to hexadecimal format (including the decimal point). The output signal of said module is then inputted to the module **_driver_7seg_4digits_**, which makes it possible for the data to be displayed on the 7segment display.
+
 ![Top structure](images/modules/Top.jpg)
 
 [top.vhd](modules/top.vhd)
-
-### Description
-By having 4 sensors connected to PMod pins JA1, JA2, JB1, JB2 we have 3 "sections" of speed measurement + average speed across all sectors. That's why **we use 4 _speed_measure_ modules**. Outputs from these modules go into **_real_switch_** module. Which of the 4 speeds is shown on the 7-segment display is determined by the combination of switches (principle of multiplexor). But before that the output signal from **_real_switch_** is inputted to the module **_real_to_hex_**, which tranforms the data type real signal to hexadecimal format (including the decimal point). The output signal of said module is then inputted to the module **_driver_7seg_4digits_**, which makes it possible for the data to be displayed on the 7segment display.
 
 | **Switches combination** | **Displayed speed** |
 | :-: | :-: |
@@ -234,7 +234,8 @@ In the following simulation we can see the behaviour of the whole top level by o
 
 ## Video
 
-Write your text here
+[Videopresentation youtube video](https://youtu.be/IT2c-6QID7A)
+
 
 <a name="references"></a>
 
