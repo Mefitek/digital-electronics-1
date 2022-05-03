@@ -164,8 +164,7 @@ The simulation shows activating signals in order 1234 and that reverse (4321), t
 
 - [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
 
-
-![Speed_measure_logic simulation error](images/Simulations/speed_measure_logic.png)
+![Speed_measure_logic simulation error](images/Simulations/speed_measure_logic_error.png)
 
 
 ### Speed_calc
