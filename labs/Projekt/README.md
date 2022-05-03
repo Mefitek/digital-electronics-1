@@ -20,7 +20,7 @@
 
 ## Project objectives
 
-Official assigment: "Measuring the speed of an object through a series of IR sensors (such as HW-201) or optical barriers."
+Official assigment: "Measuring the speed of passing object through a series of IR sensors (such as HW-201) or optical barriers."
 
 After consulting with the project assignee it was specified that the object is to pass by at least 4 IR sensors (connected to 
 the NEXYS A7-50T board) and it's speeds (speed in each "sector" between individual sensors) are to be calculated and displayed on NEXYS's 7segment displays.
