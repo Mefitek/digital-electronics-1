@@ -54,7 +54,7 @@ as "Active LOW" - meaning that when no reflected light is recieved the data outp
 ### Speed_measure
 
 #### Description
-As the name of module suggests this module measures speed of any object using 2 inputs for [IR sensors](#sensors), which are connected to `en_i` and `dis_i` inpusts. Module has **3 generic variables**: 
+As the name of module suggests this module measures speed of any object using 2 inputs for [IR sensors](#sensors), which are connected to `en_i` and `dis_i` inpusts. When input `en_i` is activated the module starts counting main clock perdiods until `dis_i` input is activated, then the speed is calculated and outputted. Module has **3 generic variables**: 
 
   1. `g_dist` = distance between sensors in cm, we work with it in [TOP](#top)
   2. `g_active` = it represents active state of sensors (we use g_active = 1 for simulations)
@@ -74,7 +74,7 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 ### Real_switch
 
 #### Description
-Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs.
+Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs (see table bellow).
 
 ![Real Switch](images/modules/real_switch_fix.png) 
 
@@ -103,7 +103,7 @@ The range of outputted hexadecimal number was decided to be "XX.XX" - which mean
 
 #### Algorithm
 
-Despite the code looking complicated at first, it is a fairly simple chain of if-elsif conditional statements, each of them being responsible for one of the four orders of magnitude (tens, units, tenths, hundredths of m/s). 
+Despite the code seeming complicated at first, it is a fairly simple chain of if-elsif conditional statements, each of them being responsible for one of the four orders of magnitude (tens, units, tenths, hundredths of m/s). 
 Depending on the rounded value the output of that spicific order is set to the appropriate (hexa)decimal constant.
 
 #### Simulation
@@ -232,4 +232,4 @@ In the following simulation we can see the behaviour of the whole top level by o
 
 ## References
 
-1. Write your text here.
+In this document we claim not to be referencing any information from a 3rd side webpage.
