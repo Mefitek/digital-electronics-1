@@ -145,7 +145,7 @@ For more information and **simulation** refer to [this assigment](https://github
 #### Description
 This module was supposed to replace the module speed_measure after figuring out that program using data type real cannot be synthetized (therefore cannot be uploaded onto the board). As can be seen on the images bellow, the only real differences were different data types and different calculation of final speed.
 
-![Speed measure logic](images/modules/speed_measure_logic_1.png)
+![Speed measure logic](images/modules/speed_measure_logic.png)
 
 [speed_measure_logic.vhd](modules/speed_measure_logic.vhd)
 
