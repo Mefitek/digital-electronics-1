@@ -126,11 +126,11 @@ In the simulation we can see that data type real number is converted to 4 decima
 ### Driver_7seg_4digits
 
 #### Description
-This module was created and tested earlier as part of the Digital electronics course (DE1) pracicals. In short it controls the common cathodes of 4 different 7 segment displays all at once, displaying the hexadecimal number on 1 of the 7segment displays while having the rest of them unlit at high enough frequency so that to the human eye it seems as if all the displays were displaying the individual numbers at once. It is important to note that for simulation purposes the 
+This module was created and tested earlier as part of the Digital electronics course (DE1) pracicals. In short it controls the common cathodes of 4 different 7 segment displays all at once, displaying the hexadecimal number on 1 of the 7segment displays while having the rest of them unlit at high enough frequency so that to the human eye it seems as if all the displays were displaying the individual numbers at once. It is important to note that for simulation purposes the `reset` input must first be toggled to High for a brief moment, otherwise the internal signal values would be undefined and the whole module wouldn't function correctly.
 
 ![driver 7seg 4digits module](images/modules/driver_7seg_4digits.png)
 
-[driver_7seg_4digits.vhd](modules/real_to_hex.vhd)
+[driver_7seg_4digits.vhd](modules/driver_7seg_4digits.vhd)
 
 
 <a name="unused_modules"></a>
