@@ -130,9 +130,9 @@ In the simulation we can see that data type real number is converted to 4 decima
 #### Description
 This module was supposed to replace the module speed_measure after figuring out that program using data type real cannot be synthetized (therefore cannot be uploaded onto the board). As can be seen on the images bellow, the only real differences were different data types and different calculation of final speed.
 
-![Speed measure logic](images/modules/speed_measure_logic.png)
+![Speed measure logic](images/modules/speed_measure_logic_1.png)
 
-[speed_measure_logic.vhd](modules/speed_measure_logic_1.vhd)
+[speed_measure_logic.vhd](modules/speed_measure_logic.vhd)
 
 **Changes in generic variables**: 
 
@@ -165,7 +165,7 @@ The simulation shows activating signals in order 1234 and that reverse (4321), t
 - [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
 
 
-![Speed_measure_logic simulation error](images/speed_measure_logic.png)
+![Speed_measure_logic simulation error](images/simulations/speed_measure_logic.png)
 
 
 ### Speed_calc
