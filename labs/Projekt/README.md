@@ -81,11 +81,11 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 
 ### Real_switch
 
+Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs.
+
 ![Real Switch](images/modules/real_switch.png) 
 
 [real_switch.vhd](modules/real_switch.vhd)
-
-Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs.
 
 | **Controlling inputs (s2_i s1_i)** | **Output** |
 | :-: | :-: |
@@ -98,18 +98,18 @@ The table shows the relation of controlling inputs and output.
 
 ### Real_to_hex
 
-![real to hex module](images/modules/real_to_hex.png)
-
-[real_to_hex.vhd](modules/real_to_hex.vhd)
-
 This modules!s function is to convert a data type real number into a hexadecimal number (including the decimal point). The module's input `real_i` is converted (through function floor() from the `ieee.math_real` library). 
 It is important to note that the conversion code is nowhere neal ideal and conventional, since working with the data type real variables is somewhat tricky. It would be favorable to use custom functions for the calculations. 
 The range of outputted hexadecimal number was decided to be "XX.XX" - which meant we would be able to display speeds between 0.01 - 99.99 m/s. The output `dp_o` represents the decimal point's position and outputs 
 `data0_o`, `data1_o`, `data2_o`, `data3_o` represent the individual decimals.
 
+![real to hex module](images/modules/real_to_hex.png)
+
+[real_to_hex.vhd](modules/real_to_hex.vhd)
+
 #### Algorithm
 
-Despite the code looking complicated at first, it is a fairly simple chain of if-else if conditional statements, each of them being responsible for one of the four orders of magnitude (tens, units, tenths, hundredths). 
+Despite the code looking complicated at first, it is a fairly simple chain of if-elsif conditional statements, each of them being responsible for one of the four orders of magnitude (tens, units, tenths, hundredths of m/s). 
 Depending on the rounded value the output of that spicific order is set to the appropriate (hexa)decimal constant.
 
 #### Simulation
