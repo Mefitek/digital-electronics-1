@@ -66,7 +66,7 @@ As the name of module suggests this module measures speed of any object using 2 
   2. `g_active` = it represents active state of sensors (we use g_active = 1 for simulations)
   3. `g_clk_f` = clock frequency
 
-![Speed_measure](images/Modules/Speed_measure.png)
+![Speed measure](images/Modules/Speed_measure.png)
 
 [speed_measure.vhd](modules/speed_measure.vhd)
 
@@ -83,6 +83,8 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 
 #### Description
 This module was supposed to replace the module speed_measure after figuring out that program using data type real cannot be synthetized (therefore cannot be uploaded onto the board). As can be seen on the images bellow, the only real differences were different data types and different calculation of final speed.
+
+![Speed measure logic](images/Modules/Speed_measure_logic.png)
 
 [speed_measure_logic.vhd](modules/speed_measure_logic.vhd)
 
@@ -123,13 +125,11 @@ unable to implement this module into the final version of the project.
 
 ### Real_switch
 
-![Real Switch](images/Simulations/real_switch_block.png) 
+![Real Switch](images/modules/real_switch.png) 
 
 [real_switch.vhd](modules/real_switch.vhd)
 
 Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs.
-
-![Real switch](images/Simulations/real_switch.png) 
 
 | **Controlling inputs (s2_i s1_i)** | **Output** |
 | :-: | :-: |
@@ -142,7 +142,7 @@ The table shows the relation of controlling inputs and output.
 
 ### Real_to_hex
 
-![real to hex module](images/Simulations/real_to_hex_block.png)
+![real to hex module](images/modules/real_to_hex.png)
 
 [real_to_hex.vhd](modules/real_to_hex.vhd)
 
