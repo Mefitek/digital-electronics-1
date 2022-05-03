@@ -151,6 +151,8 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 #### Description
 This module was supposed to replace the module speed_measure after figuring out that program using data type real cannot be synthetized (therefore cannot be uploaded onto the board). As can be seen on the images bellow, the only real differences were different data types and different calculation of final speed.
 
+[speed_measure_logic.vhd](modules/speed_measure_logic.vhd)
+
 **Changes in generic variables**: 
 
   1. `g_dist` = now as an unsigned with 5 bits (up to 31 cm - more than length of our connector cables)
@@ -175,73 +177,6 @@ This module was supposed to replace the module speed_measure after figuring out 
 
 ![speed_measure_logic comparison 1](images/speed_measure_logic/speed_measure_logic1.png)
 ![speed_measure_logic comparison 2](images/speed_measure_logic/speed_measure_logic2.png)
-
-```vhdl
-------------------------------------------------------------
--- Architecture declaration for speed measurer logic
-------------------------------------------------------------
-aarchitecture Behavioral of speed_measure_logic is
-
-
-    signal s_cnt        : natural := 1; 
-    signal s_meas     : std_logic := '0';
-    
-    signal s_v : unsigned(32 - 1 downto 0);
-    signal s_help : unsigned(32 - 1 downto 0) := g_clk_f*g_dist;
-
-begin
-
-    p_measure : process(clk)
-    begin
-    
-        if rising_edge(clk) then
-        
-        	-- Reset_i
-        	if (reset_i = '1') then
-        		s_meas <= '0';
-                s_cnt <= 0;
-			s_v <= "00000000000000000000000000000000";
-            else
-        
-              if (en_i = '1') then
-                  if (s_meas = '0') then
-                      s_meas <= '1';
-                      s_cnt <= 1;
-		      s_v <= "00000000000000000000000000000000";
-                  end if;
-              end if;
-
-              if (dis_i = g_active) then
-                  if (s_meas = '1') then
-                      s_meas <= '0';
-                      	-- Calculating speed
-                        -- Division by shifting the bits
-                        if(s_cnt >= 4294967296) then -- 2^32
-                        	s_v <= shift_right(s_help, 32);
-                        elsif (s_cnt >= 2147483648) then -- 2^31
-                        	s_v <= shift_right(s_help, 31); 
-                       	-- ...
-                        -- other cases
-                        -- ...
-                        elsif (s_cnt >= 4) then -- 2^2
-                        	s_v <= shift_right(s_help, 2);
-                        elsif (s_cnt >= 2) then -- 2^1
-                        	s_v <= shift_right(s_help, 1);
-                       	end if; -- Shifting
-                  end if; -- s_meas = '1'
-              end if; -- dis_i = '1'
-
-              if (s_meas = '1') then
-                  s_cnt <= s_cnt + 1;
-              end if;
-          end if;
-      end if;
-      end process p_measure;
-      
-       v_o <= std_logic_vector(s_v);
-    
-end architecture Behavioral;
-```
 
 #### Simulation
 During the simulation we encountered an unknown error that we weren't able to fix. For the lack of time to consult this problem with the project assignee, we were 
@@ -274,7 +209,7 @@ The table shows the relation of controlling inputs and output.
 
 ![real to hex module](images/Simulations/real_to_hex_block.png)
 
-![real to hex code](modules/real_to_hex.vhd)
+![real_to_hex.vhd](modules/real_to_hex.vhd)
 
 This modules!s function is to convert a data type real number into a hexadecimal number (including the decimal point). The module's input `real_i` is converted (through function floor() from the `ieee.math_real` library). 
 It is important to note that the conversion code is nowhere neal ideal and conventional, since working with the data type real variables is somewhat tricky. It would be favorable to use custom functions for the calculations. 
