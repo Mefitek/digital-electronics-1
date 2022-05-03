@@ -68,7 +68,7 @@ As the name of module suggests this module measures speed of any object using 2 
   2. `g_active` = it represents active state of sensors (we use g_active = 1 for simulations)
   3. `g_clk_f` = clock frequency
 
-![Speed measure](images/modules/Speed_measure.png)
+![Speed measure](images/modules/Speed_measure_1.png)
 
 [speed_measure.vhd](modules/speed_measure.vhd)
 
