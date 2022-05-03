@@ -11,6 +11,7 @@ entity top is
 		JA2 : in STD_LOGIC;
 		JB1 : in STD_LOGIC;
 		JB2 : in STD_LOGIC;
+		BTNC : in STD_LOGIC;
 
         CLK100MHZ : in STD_LOGIC;
 		SW 		  : in STD_LOGIC_VECTOR (1 downto 0);
@@ -31,7 +32,6 @@ end entity top;
 
 architecture Behavioral of top is
 
-  -- Interni signaly pro rychlost
   signal s_r1       : real := 0.0 ;
   signal s_r2       : real := 0.0 ;
   signal s_r3       : real := 0.0 ;
@@ -48,8 +48,8 @@ begin
 	--------------------------------------------------------------------
 	speed_measure_section_1 : entity work.speed_measure
       generic map(
-          g_dist => 20.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+          g_dist => 20.0,
+		  g_active => '1', -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -62,8 +62,8 @@ begin
 	--------------------------------------------------------------------
     speed_measure_section_2 : entity work.speed_measure
       generic map(
-          g_dist => 30.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+          g_dist => 30.0,
+		  g_active => '1', -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -76,8 +76,8 @@ begin
 	--------------------------------------------------------------------
     speed_measure_section_3 : entity work.speed_measure
       generic map(
-          g_dist => 20.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+          g_dist => 20.0,
+		  g_active => '1', -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -90,8 +90,8 @@ begin
 	--------------------------------------------------------------------
 	speed_measure_avg : entity work.speed_measure
       generic map(
-          g_dist => 70.0;
-		  g_active => '0'; -- Whether the input sensors are active HIGH or LOW
+          g_dist => 70.0,
+		  g_active => '1', -- Whether the input sensors are active HIGH or LOW
           g_clk_f => 100000000  -- Main clock frequency [Hz]
       )
       port map(
@@ -107,10 +107,10 @@ begin
       
 			clk   => CLK100MHZ,
 			
-			r1_i => s_v1,
-			r2_i => s_v2,
-			r3_i => s_v3,
-			r4_i  => s_v,
+			r1_i => s_r1,
+			r2_i => s_r2,
+			r3_i => s_r3,
+			r4_i  => s_ravg,
 			
 			s1_i => SW(0),
 			s2_i => SW(1),
@@ -136,7 +136,7 @@ begin
         
         port map(
             clk   		=> CLK100MHZ,
-           	reset		=> '0',
+           	reset		=> BTNC,
             
             data0_i(3 downto 0)	=> s_data0(3 downto 0),
             data1_i(3 downto 0)	=> s_data1(3 downto 0),
