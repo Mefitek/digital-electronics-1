@@ -232,4 +232,4 @@ In the following simulation we can see the behaviour of the whole top level by o
 
 ## References
 
-In this document we claim not to be referencing any information from a 3rd side webpage.
+In this document we claim not to be referencing any information from a 3rd party webside.
