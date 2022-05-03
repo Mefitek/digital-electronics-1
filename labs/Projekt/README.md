@@ -176,7 +176,7 @@ the speed of passing object in BOTH directions. But the combination of `speed_me
 effective. Regardless we thought it would be good to mention how measuring speed from both directions in a single block of code 
 could be implemented.
 
-![Speed measure logic](images/modules/Speed_measure_logic.png)
+![Speed calc](images/modules/speed_calc.png)
 
 [speed_measure_logic.vhd](modules/speed_measure_logic.vhd)
 
