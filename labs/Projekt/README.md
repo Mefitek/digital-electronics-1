@@ -52,7 +52,7 @@ For more information see [The store page](https://store.digilentinc.com/nexys-a7
 It's main function is to transmit and recieve reflected infrared waves (wavelength 7000-1000 nm) to signalize the passing of an object. It is important to note 
 that the IR light will have trouble reflecting of off black object, as it will be absorbed. Another important thing to mention is the fact that the sensor functions 
 as "Active LOW" - meaning that when no reflected light is recieved the data output is HIGH and when reflected light is recieved it's LOW. For more information see 
-[The datasheet](https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/) or our [simplified description](HW201.md).
+[The datasheet](docs/ir_datasheet.pdf) or our [simplified description](HW201.md).
 
 
 <a name="modules"></a>
