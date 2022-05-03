@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_speed_measure_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_speed_measure_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="5333333333fs"></ZoomStartTime>
+      <ZoomEndTime time="23812206573fs"></ZoomEndTime>
+      <Cursor1Time time="32000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="173"></NameColumnWidth>
+      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/tb_speed_measure_top/s_clk_100MHz" type="logic">
+      <obj_property name="ElementShortName">s_clk_100MHz</obj_property>
+      <obj_property name="ObjectShortName">s_clk_100MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/s_sensor1" type="logic">
+      <obj_property name="ElementShortName">s_sensor1</obj_property>
+      <obj_property name="ObjectShortName">s_sensor1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/s_sensor2" type="logic">
+      <obj_property name="ElementShortName">s_sensor2</obj_property>
+      <obj_property name="ObjectShortName">s_sensor2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/s_sensor3" type="logic">
+      <obj_property name="ElementShortName">s_sensor3</obj_property>
+      <obj_property name="ObjectShortName">s_sensor3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/s_sensor4" type="logic">
+      <obj_property name="ElementShortName">s_sensor4</obj_property>
+      <obj_property name="ObjectShortName">s_sensor4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/s_switch" type="array">
+      <obj_property name="ElementShortName">s_switch[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_switch[1:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_r1" type="other">
+      <obj_property name="ElementShortName">s_r1</obj_property>
+      <obj_property name="ObjectShortName">s_r1</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_r2" type="other">
+      <obj_property name="ElementShortName">s_r2</obj_property>
+      <obj_property name="ObjectShortName">s_r2</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_r3" type="other">
+      <obj_property name="ElementShortName">s_r3</obj_property>
+      <obj_property name="ObjectShortName">s_r3</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_ravg" type="other">
+      <obj_property name="ElementShortName">s_ravg</obj_property>
+      <obj_property name="ObjectShortName">s_ravg</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_r" type="other">
+      <obj_property name="ElementShortName">s_r</obj_property>
+      <obj_property name="ObjectShortName">s_r</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_data0" type="array">
+      <obj_property name="ElementShortName">s_data0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_data0[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_data1" type="array">
+      <obj_property name="ElementShortName">s_data1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_data1[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_data2" type="array">
+      <obj_property name="ElementShortName">s_data2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_data2[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_data3" type="array">
+      <obj_property name="ElementShortName">s_data3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_data3[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/s_dp" type="array">
+      <obj_property name="ElementShortName">s_dp[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_dp[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/CA" type="logic">
+      <obj_property name="ElementShortName">CA</obj_property>
+      <obj_property name="ObjectShortName">CA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/CB" type="logic">
+      <obj_property name="ElementShortName">CB</obj_property>
+      <obj_property name="ObjectShortName">CB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/CC" type="logic">
+      <obj_property name="ElementShortName">CC</obj_property>
+      <obj_property name="ObjectShortName">CC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/CD" type="logic">
+      <obj_property name="ElementShortName">CD</obj_property>
+      <obj_property name="ObjectShortName">CD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/CE" type="logic">
+      <obj_property name="ElementShortName">CE</obj_property>
+      <obj_property name="ObjectShortName">CE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/CF" type="logic">
+      <obj_property name="ElementShortName">CF</obj_property>
+      <obj_property name="ObjectShortName">CF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/CG" type="logic">
+      <obj_property name="ElementShortName">CG</obj_property>
+      <obj_property name="ObjectShortName">CG</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_speed_measure_top/uut_speed_measure_top/DP" type="logic">
+      <obj_property name="ElementShortName">DP</obj_property>
+      <obj_property name="ObjectShortName">DP</obj_property>
+   </wvobject>
+</wave_config>
