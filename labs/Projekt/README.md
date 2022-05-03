@@ -42,8 +42,8 @@ and the final product in this file and video presentation.
 ### Nexys A7-50T Board
 It is an accessible FPGA developement board with great performance: We were already familiar with it's funcionality from the Digital electronics (DE1) practicals. 
 For more information see [The store page](https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/), 
-[reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) or 
-[schematic](docs/nexys-a7-sch.pdf).
+[reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual),  
+[schematic](docs/nexys-a7-sch.pdf) or our [simplified description](docs/nexys-a7-sch.pdf).
 
 <a name="sensors"></a>
 ### IR sensor HW-201
@@ -164,6 +164,8 @@ In the simulation wave is shown input signal like real number and the converted 
 ![real to hex simulation](images/Simulations/real_to_hex.png)
 
 ## TOP module description and simulations
+
+![Top structure](images/modules/Top.jpg)
 
 ### Description
 By having 4 sensors connected to PMod pins JA1, JA2, JB1, JB2 we have 3 "sections" of speed measurement + average speed across all sectors. That's why **we use 4 _speed_measure_ modules**. Outputs from these modules go into **_real_switch_** module. Which of the 4 speeds is shown on the 7-segment display is determined by the combination of switches (principle of multiplexor). But before that the output signal from **_real_switch_** is inputted to the module **_real_to_hex_**, which tranforms the data type real signal to hexadecimal format (including the decimal point). The output signal of said module is then inputted to the module **_driver_7seg_4digits_**, which makes it possible for the data to be displayed on the 7segment display.
@@ -365,8 +367,6 @@ begin
 
 end architecture Behavioral;
 ```
-
-![Top structure](images/Top.jpg)
 
 ### Description
 
