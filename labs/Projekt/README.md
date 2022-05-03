@@ -70,6 +70,7 @@ As the name of module suggests this module measures speed of any object using 2 
 
 ![Speed measure](images/modules/Speed_measure.png)
 
+[Speed_measure vhd](modules/speed_measure.vhd)
 
 #### Simulation
 Distance between sensors is set to 0,0025 cm and time between detections is 2080 ns (0,00208 ms), so we should get speed (0,000025/0,00000208) = approx. 12,019 m/s. 
@@ -77,8 +78,6 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 - You can see that we got a speed ~ 12,02 m/s 
 
 ![Speed_measure simulation](images/Simulations/speed_measure.png)
-
-[Speed_measure vhd](modules/speed_measure.vhd)
 
 ### Real_switch
 
