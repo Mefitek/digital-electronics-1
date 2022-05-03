@@ -132,7 +132,7 @@ This module was supposed to replace the module speed_measure after figuring out 
 
 ![Speed measure logic](images/modules/speed_measure_logic.png)
 
-[speed_measure_logic.vhd](modules/speed_measure_logic.vhd)
+[speed_measure_logic.vhd](modules/speed_measure_logic_1.vhd)
 
 **Changes in generic variables**: 
 
@@ -165,7 +165,7 @@ The simulation shows activating signals in order 1234 and that reverse (4321), t
 - [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
 
 
-![Speed_measure_logic simulation error](images/speed_measure_logic_1.png)
+![Speed_measure_logic simulation error](images/speed_measure_logic.png)
 
 
 ### Speed_calc
