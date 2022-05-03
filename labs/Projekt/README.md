@@ -78,6 +78,7 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 
 ![Speed_measure simulation](images/Simulations/speed_measure.png)
 
+[Speed_measure vhd](modules/speed_measure.vhd)
 
 ### Real_switch
 
