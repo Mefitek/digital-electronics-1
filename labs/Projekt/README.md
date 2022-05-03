@@ -82,6 +82,7 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 
 ### Real_switch
 
+#### Description
 Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs.
 
 ![Real Switch](images/modules/real_switch_fix.png) 
@@ -99,12 +100,13 @@ The table shows the relation of controlling inputs and output.
 
 ### Real_to_hex
 
+#### Description
 This modules!s function is to convert a data type real number into a hexadecimal number (including the decimal point). The module's input `real_i` is converted (through function floor() from the `ieee.math_real` library). 
 It is important to note that the conversion code is nowhere neal ideal and conventional, since working with the data type real variables is somewhat tricky. It would be favorable to use custom functions for the calculations. 
 The range of outputted hexadecimal number was decided to be "XX.XX" - which meant we would be able to display speeds between 0.01 - 99.99 m/s. The output `dp_o` represents the decimal point's position and outputs 
 `data0_o`, `data1_o`, `data2_o`, `data3_o` represent the individual decimals.
 
-![real to hex module](images/modules/real_to_hex_fix.png)
+![real to hex module](images/modules/real_to_hex.png)
 
 [real_to_hex.vhd](modules/real_to_hex.vhd)
 
@@ -119,6 +121,16 @@ In the simulation we can see that data type real number is converted to 4 decima
 
 - [EDAplayground link](https://www.edaplayground.com/x/uEgg)
 ![real to hex simulation](images/Simulations/real_to_hex.png)
+
+
+### Driver_7seg_4digits
+
+#### Description
+This module was created and tested earlier as part of the Digital electronics course (DE1) pracicals. In short it controls the common cathodes of 4 different 7 segment displays all at once, displaying the hexadecimal number on 1 of the 7segment displays while having the rest of them unlit at high enough frequency so that to the human eye it seems as if all the displays were displaying the individual numbers at once. It is important to note that for simulation purposes the 
+
+![driver 7seg 4digits module](images/modules/driver_7seg_4digits.png)
+
+[driver_7seg_4digits.vhd](modules/real_to_hex.vhd)
 
 
 <a name="unused_modules"></a>
@@ -207,6 +219,13 @@ By having 4 sensors connected to PMod pins JA1, JA2, JB1, JB2 we have 3 "section
    
 
 ### Simulation
+
+In the following simulation we can see the behaviour of the whole top level by observing the input signals, the signals between each of the modules and the output signals. The signals `s_sensor1`÷`s_sensor3` and `s_sensor4` simulate the IR sensors (for better clarity they are represented as active High). Their outputs are (shown in light blue) `s_r1`÷`s_r3` and `s_ravg`. Depending on the combination of `s_switch` one of these speeds is outputted by the `real_switch` module as `s_r` signal and then converted by `real_to_hex` module to four 4bit hexadecimal numbers `s_data0`÷`s_data3` and decimal point information `s_dp`. This number is displayed od the 7segment display thanks to the `driver_7seg_4digits` module, which's output signals control the specific segments (Cathodes `CA` - `CG`) and decimal points (`DP`) of the 7segment displays.
+
+[tb_top.vhd](modules/tb_top.vhd)
+
+![Top simulation 1](images/Simulations/top_2.png)
+
 
 <a name="video"></a>
 
