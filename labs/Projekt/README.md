@@ -122,6 +122,8 @@ In the simulation wave is shown input signal like real number and the converted 
 
 <a name="unused_modules"></a>
 
+## unused VHDL modules
+
 ### Speed_measure_logic
 
 #### Description
