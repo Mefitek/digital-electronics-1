@@ -130,7 +130,7 @@ In the simulation wave is shown input signal like real number and the converted 
 #### Description
 This module was supposed to replace the module speed_measure after figuring out that program using data type real cannot be synthetized (therefore cannot be uploaded onto the board). As can be seen on the images bellow, the only real differences were different data types and different calculation of final speed.
 
-![Speed measure logic](images/modules/Speed_measure_logic.png)
+![Speed measure logic](images/modules/speed_measure_logic.png)
 
 [speed_measure_logic.vhd](modules/speed_measure_logic.vhd)
 
@@ -178,7 +178,7 @@ could be implemented.
 
 ![Speed calc](images/modules/speed_calc.png)
 
-[speed_measure_logic.vhd](modules/speed_measure_logic.vhd)
+[speed_calc.vhd](modules/speed_calc.vhd)
 
 **Changes in generic variables**: 
 
