@@ -131,7 +131,7 @@ This module was created and tested earlier as part of the Digital electronics co
 For more information and **simulation** refer to [this assigment](https://github.com/tomas-fryza/digital-electronics-1/tree/master/labs/07-display_driver) and [this submitted solution](https://github.com/Mefitek/digital-electronics-1/tree/main/labs/07-display_driver) of the module from class.
 
 
-![driver 7seg 4digits module](images/modules/driver_7segs_4digits.png)
+![driver 7seg 4digits module](images/modules/driver_7segs_4digits_1.png)
 
 [driver_7seg_4digits.vhd](modules/driver_7seg_4digits/driver_7seg_4digits.vhd)
 
