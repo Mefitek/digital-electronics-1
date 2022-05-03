@@ -43,15 +43,16 @@ and the final product in this file and video presentation.
 ### Nexys A7-50T Board
 It is an accessible FPGA developement board with great performance: We were already familiar with it's funcionality from the Digital electronics (DE1) practicals. 
 For more information see [The store page](https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/), 
-[reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual),  
-[schematic](docs/nexys-a7-sch.pdf) or our [simplified description](docs/nexys-a7-sch.pdf).
+[reference manual](https://reference.digilentinc.com/reference/programmable-logic/nexys-a7/reference-manual) or 
+[schematic](docs/nexys-a7-sch.pdf).
 
 <a name="sensors"></a>
+
 ### IR sensor HW-201
 It's main function is to transmit and recieve reflected infrared waves (wavelength 7000-1000 nm) to signalize the passing of an object. It is important to note 
 that the IR light will have trouble reflecting of off black object, as it will be absorbed. Another important thing to mention is the fact that the sensor functions 
 as "Active LOW" - meaning that when no reflected light is recieved the data output is HIGH and when reflected light is recieved it's LOW. For more information see 
-[The datasheet](https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/).
+[The datasheet](https://store.digilentinc.com/nexys-a7-fpga-trainer-board-recommended-for-ece-curriculum/) or our [simplified description](docs/HW201.md).
 
 
 <a name="modules"></a>
