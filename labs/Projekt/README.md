@@ -4,6 +4,7 @@
 
 * Petr Klíma - Team leader, Programming, Design
    * Top simulation
+   * Odkazy na kody misto bloku kodu
 * Vladimír Skoumal - Testing, Hardware behaviour, Video presentation
    * Video presentation, 
    * Modules testing a description (real_switch and real_to_hex) 	
@@ -243,7 +244,7 @@ end architecture Behavioral;
 ```
 
 #### Simulation
-During the simulation we expected an unknown error that we weren't able to fix. For the lack of time to consult this problem with the project assignee, we were 
+During the simulation we encountered an unknown error that we weren't able to fix. For the lack of time to consult this problem with the project assignee, we were 
 unable to implement this module into the final version of the project.
 - [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
 
@@ -256,18 +257,18 @@ unable to implement this module into the final version of the project.
 
 ![Speed_measure](images/Simulations/real_switch_block.png) 
 
-Real switch module is similar to Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i` and one output - `r_o` which is always one of the inputs as you can see on the simulation wave. In the wave is shown that we switch between inputs every 100 ns. On the inputs are bring the outpust signals from every speed measure module and output signal goes to the convertor real_to_hex.
+Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs.
 
 ![Real switch](images/Simulations/real_switch.png) 
 
-| **Switches combination** | **Displayed speed** |
+| **Combination of switches** | **Output** |
 | :-: | :-: |
 | 00 | `r4_i` |
 | 01 | `r3_i` |
 | 10 | `r2_i` |
 | 11 | `r1_i` |
 
-In the table is shown what means every combinations of switches.
+The table shows the 
 
 ### Real_to_hex
 
