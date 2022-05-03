@@ -213,7 +213,7 @@ The table shows the relation of controlling inputs and output.
 
 ![real to hex module](images/Simulations/real_to_hex_block.png)
 
-![real_to_hex.vhd](modules/real_to_hex.vhd)
+[real_to_hex.vhd](modules/real_to_hex.vhd)
 
 This modules!s function is to convert a data type real number into a hexadecimal number (including the decimal point). The module's input `real_i` is converted (through function floor() from the `ieee.math_real` library). 
 It is important to note that the conversion code is nowhere neal ideal and conventional, since working with the data type real variables is somewhat tricky. It would be favorable to use custom functions for the calculations. 
