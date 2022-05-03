@@ -272,40 +272,26 @@ The table shows the relation of controlling inputs and output.
 
 ### Real_to_hex
 
-![real to hex](images/Simulations/real_to_hex_block.png)
+![real to hex module](images/Simulations/real_to_hex_block.png)
+
+![real to hex code](modules/real_to_hex.vhd)
 
 This modules!s function is to convert a data type real number into a hexadecimal number (including the decimal point). The module's input `real_i` is converted (through function floor() from the `ieee.math_real` library). 
 It is important to note that the conversion code is nowhere neal ideal and conventional, since working with the data type real variables is somewhat tricky. It would be favorable to use custom functions for the calculations. 
 The range of outputted hexadecimal number was decided to be "XX.XX" - which meant we would be able to display speeds between 0.01 - 99.99 m/s. The output `dp_o` represents the decimal point's position and outputs 
-`data0_o`, `data1_o`, `data2_o`, `data3_o` represent the particular decimals.
+`data0_o`, `data1_o`, `data2_o`, `data3_o` represent the individual decimals.
 
-#### Algoritm
+#### Algorithm
 
-![real to hex](images/constantsss.png)
-
-The main algoritm starts with ten constants which are necessary for ....
-
-![real to hex](images/floor.png)
-
-Here is the first option 
-
-![real to hex](images/elseif.png)
-
-tohel zase něco dalsiho
-
-![real to hex](images/tenths.png)
-
-tohle uz ani nevim co
-
-![real to hex](images/hundreths.png)
-
-tohle nejakou hausovinu
+Despite the code looking complicated at first, it is a fairly simple chain of if-else if conditional statements, each of them being responsible for one of the four orders of magnitude (tens, units, tenths, hundredths). 
+Depending on the rounded value the output of that spicific order is set to the appropriate (hexa)decimal constant.
 
 #### Simulation
 
 In the simulation wave is shown input signal like real number and the converted output signals like hexadecimal numbers.
 
-![real to hex](images/Simulations/real_to_hex.png)
+- [EDAplayground link](https://www.edaplayground.com/x/uEgg)
+![real to hex simulation](images/Simulations/real_to_hex.png)
 
 ## TOP module description and simulations
 
