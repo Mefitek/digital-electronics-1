@@ -232,4 +232,8 @@ In the following simulation we can see the behaviour of the whole top level by o
 
 ## References
 
-In this document we claim not to be referencing any information from a 3rd party webside.
+[Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual?redirect=1)
+[Nexys A7 Schematics](https://digilent.com/reference/_media/programmable-logic/nexys-a7/nexys-a7-d3-sch.pdf)
+[IR Sensor Datasheet](https://components101.com/sites/default/files/component_datasheet/Datasheet%20of%20IR%20%20Sensor.pdf)
+
+
