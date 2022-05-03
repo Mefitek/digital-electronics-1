@@ -177,14 +177,14 @@ This module was created as an alternative to the 4 `speed_meas` modules. It's ad
 [speed_calc.vhd](modules/speed_calc.vhd)
 
 #### Changes
-As can be seen in the [code](modules/speed_calc.vhd) the measuring is done by switching between different states which represent in which sector an from what direction the object is moving.
+As can be seen in the [code](modules/speed_calc.vhd) the measuring is done by switching between different states which represent in which sector and from what direction the object is moving.
 
 #### Simulation
 
 - [EDAplayground link](https://www.edaplayground.com/x/SMVi)
 
 
-![Speed_measure_logic simulation error](images/simulations/speed_calc.png)
+![Speed_measure_logic simulation error](images/Simulations/speed_calc.png)
 
 
 <a name="top"></a>
