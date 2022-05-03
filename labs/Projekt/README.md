@@ -262,10 +262,10 @@ Real switch module is similar to Multiplexor. There are four inputs - `r1_i`, `r
 
 | **Switches combination** | **Displayed speed** |
 | :-: | :-: |
-| 00 | Speed by 4. Sensor |
-| 01 | Speed by 3. Sensor |
-| 10 | Speed by 2. Sensor |
-| 11 | Speed by 1. Sensor |
+| 00 | `r4_i` |
+| 01 | `r3_i` |
+| 10 | `r2_i` |
+| 11 | `r1_i` |
 
 In the table is shown what means every combinations of switches.
 
