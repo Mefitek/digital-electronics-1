@@ -261,18 +261,21 @@ Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, 
 
 ![Real switch](images/Simulations/real_switch.png) 
 
-| **Combination of switches** | **Output** |
+| **Controlling inputs (s2_i s1_i)** | **Output** |
 | :-: | :-: |
-| 00 | `r4_i` |
-| 01 | `r3_i` |
-| 10 | `r2_i` |
-| 11 | `r1_i` |
+| 0 0 | `r4_i` |
+| 0 1 | `r3_i` |
+| 1 0 | `r2_i` |
+| 1 1 | `r1_i` |
 
-The table shows the 
+The table shows the relation of controlling inputs and output.
 
 ### Real_to_hex
 
 ![real to hex](images/Simulations/real_to_hex_block.png)
+
+This modules!s function is to convert a data type real number into a hexadecimal number (including the decimal point). The module's input `real_i` is converted (through function floor() from the `ieee.math_real` library). 
+It is important to note that the conversion code is nowhere neal ideal and conventional, since working with the data type real variables is somewhat tricky. It would be favorable to use custom functions  
 
 This module Real_to_hex is necessary to convert of real number to hexadecimal number. The display cannot work with real number so we must convert it. This module have one input `real_i` and five outputs `data0_o`, `data1_o`, `data2_o`, `data3_o` and `dp_o`. On the input is bring the output signal from Real_switch module (one of the four speed). Output signals goes to 7 digits display module. `dp_o` represent decimal point in real number.
 
