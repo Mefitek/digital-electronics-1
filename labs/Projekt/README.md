@@ -171,10 +171,7 @@ unable to implement this module into the final version of the project.
 ### Speed_calc
 
 #### Description
-This module was mad as an alternative to the 4 `speed_meas` modules. It's advantage is that is is able to measure and calculate 
-the speed of passing object in BOTH directions. But the combination of `speed_meas` modules is much more simpler, modular and 
-effective. Regardless we thought it would be good to mention how measuring speed from both directions in a single block of code 
-could be implemented.
+This module was created as an alternative to the 4 `speed_meas` modules. It's advantage is that is is able to measure and calculate  the speed of passing object in BOTH directions. But the combination of `speed_meas` modules is much more simpler, modular and effective. Regardless, we thought it would be good to mention how measuring speed from both directions in a single block of code could be implemented.
 
 ![Speed calc](images/modules/speed_calc.png)
 
