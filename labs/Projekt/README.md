@@ -68,7 +68,7 @@ As the name of module suggests this module measures speed of any object using 2 
   2. `g_active` = it represents active state of sensors (we use g_active = 1 for simulations)
   3. `g_clk_f` = clock frequency
 
-![Speed measure](images/modules/Speed_measure_1.png)
+![Speed measure](images/modules/Speed_measure.png)
 
 [speed_measure.vhd](modules/speed_measure.vhd)
 
@@ -165,7 +165,7 @@ The simulation shows activating signals in order 1234 and that reverse (4321), t
 - [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
 
 
-![Speed_measure_logic simulation error](images/speed_measure_logic.png)
+![Speed_measure_logic simulation error](images/speed_measure_logic_1.png)
 
 
 ### Speed_calc
