@@ -192,7 +192,9 @@ unable to implement this module into the final version of the project.
 
 ### Real_switch
 
-![Speed_measure](images/Simulations/real_switch_block.png) 
+![Real Switch](images/Simulations/real_switch_block.png) 
+
+[real_switch.vhd](modules/real_switch.vhd)
 
 Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs.
 
