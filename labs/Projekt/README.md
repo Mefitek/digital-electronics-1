@@ -84,7 +84,7 @@ Distance between sensors is set to 0,0025 cm and time between detections is 2080
 
 Real switch module is similar to a Multiplexor. There are four inputs - `r1_i`, `r2_i`, `r3_i`, `r4_i`, 2 controlling inputs `s1_i`, `s2_i` and one output - `r_o`. Which of the four inputs is outputted is determined by the combination of the controlling inputs.
 
-![Real Switch](images/modules/real_switch.png) 
+![Real Switch](images/modules/real_switch_fix.png) 
 
 [real_switch.vhd](modules/real_switch.vhd)
 
@@ -104,7 +104,7 @@ It is important to note that the conversion code is nowhere neal ideal and conve
 The range of outputted hexadecimal number was decided to be "XX.XX" - which meant we would be able to display speeds between 0.01 - 99.99 m/s. The output `dp_o` represents the decimal point's position and outputs 
 `data0_o`, `data1_o`, `data2_o`, `data3_o` represent the individual decimals.
 
-![real to hex module](images/modules/real_to_hex.png)
+![real to hex module](images/modules/real_to_hex_fix.png)
 
 [real_to_hex.vhd](modules/real_to_hex.vhd)
 
