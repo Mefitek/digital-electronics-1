@@ -1,3 +1,14 @@
+------------------------------------------------------------
+--
+-- Data type real to hexadecimal convertor
+-- Nexys A7-50T, Vivado v2020.1.1, EDA Playground
+--
+-- Copyright (c) 2020-Present Petr Klima, Matej Cernohous, Vladimir Skoumal
+-- Dept. of Radio Electronics, Brno Univ. of Technology, Czechia
+-- This work is licensed under the terms of the MIT license.
+--
+------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;

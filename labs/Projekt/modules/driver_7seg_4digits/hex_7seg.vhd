@@ -1,39 +1,22 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 03/08/2022 01:18:47 PM
--- Design Name: 
--- Module Name: hex_7seg - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
+------------------------------------------------------------
+--
+-- Hex to 7seg convertor
+-- Nexys A7-50T, Vivado v2020.1.1, EDA Playground
+--
+-- Copyright (c) 2020-Present Petr Klima, Matej Cernohous, Vladimir Skoumal
+-- Dept. of Radio Electronics, Brno Univ. of Technology, Czechia
+-- This work is licensed under the terms of the MIT license.
+--
+------------------------------------------------------------
 
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity hex_7seg is
-    Port ( hex_i : in STD_LOGIC_VECTOR (3 downto 0); -- 4 bitovy inputy
-           seg_o : out STD_LOGIC_VECTOR (6 downto 0)); -- 7 bitovy output
+    Port ( hex_i : in STD_LOGIC_VECTOR (3 downto 0); -- 4 bit input
+           seg_o : out STD_LOGIC_VECTOR (6 downto 0)); -- 7 bit output
 end hex_7seg;
 
 architecture Behavioral of hex_7seg is
