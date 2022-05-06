@@ -166,7 +166,7 @@ This module was supposed to replace the module speed_measure after figuring out 
 ![speed_measure_logic comparison 2](images/modules/speed_measure_logic/speed_measure_logic2.png)
 
 #### Simulation
-The simulation shows activating signals in order 1234 and that reverse (4321), the speed is calculated as a data type real number.
+Unfortunately during running the simulation we encountered an unknown error that we weren't able to recognize nor fix. Because of the fact that we weren't able to simulate the funcionality of this module we couldn't implement it further into the final version of the project.
 
 - [EDAplayground link](https://www.edaplayground.com/x/jZ7T)
 
@@ -186,6 +186,7 @@ This module was created as an alternative to the 4 `speed_meas` modules. It's ad
 As can be seen in the [code](modules/speed_calc.vhd) the measuring is done by switching between different states which represent in which sector and from what direction the object is moving.
 
 #### Simulation
+The simulation shows activating signals in order 1234 and that reverse (4321), the speed is calculated as a data type real number.
 
 - [EDAplayground link](https://www.edaplayground.com/x/SMVi)
 
