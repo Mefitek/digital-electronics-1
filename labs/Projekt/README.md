@@ -186,7 +186,7 @@ This module was created as an alternative to the 4 `speed_meas` modules. It's ad
 As can be seen in the [code](modules/speed_calc.vhd) the measuring is done by switching between different states which represent in which sector and from what direction the object is moving.
 
 #### Simulation
-The simulation shows activating signals in order 1234 and that reverse (4321), the speed is calculated as a data type real number.
+The simulation shows activating signals in order 1234 and then in reverse (4321), the speed is calculated as a data type real number.
 
 - [EDAplayground link](https://www.edaplayground.com/x/SMVi)
 
